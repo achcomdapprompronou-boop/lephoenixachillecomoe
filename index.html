@@ -1,1810 +1,1806 @@
-<!DOCTYPE html>  
-<html lang="fr">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
-  <title>Site Web officiel du Cabinet LE PHŒNIX — ACHILLE COMOE Legal Advisory</title>  
-  <meta name="description" content="Cabinet LE PHŒNIX — ACHILLE COMOE : expertise juridique de haut niveau, conseil stratégique, gouvernance et gestion des risques. Accompagnement des entreprises, institutions et acteurs privés en responsabilité, conformité réglementaire, droit de l’environnement et droit international privé économique.">  
-  <meta name="author" content="Cabinet LE PHŒNIX — ACHILLE COMOE Legal Advisory">  
-  <link rel="icon" type="image/png" href="favicon-phoenix.png">  
-  <link rel="preconnect" href="https://fonts.googleapis.com">  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
-  <style>  
-    :root {  
-      --primary: #1f3259;  
-      --primary-light: #314674;  
-      --accent: #c99a2b;  
-      --accent-soft: rgba(201, 154, 43, 0.12);  
-      --bg: #f5f7fb;  
-      --bg-soft: #eef2ff;  
-      --surface: #ffffff;  
-      --surface-soft: #f3f5ff;  
-      --text: #1e2233;  
-      --muted: #6d7390;  
-      --white: #ffffff;  
-      --border: #dde1ee;  
-      --radius-lg: 24px;  
-      --radius-md: 14px;  
-      --radius-pill: 999px;  
-      --shadow-soft: 0 18px 45px rgba(23, 38, 80, 0.12);  
-      --shadow-light: 0 8px 24px rgba(23, 38, 80, 0.08);  
-      --transition: all 0.25s ease;  
-    }  
-  
-    * {  
-      box-sizing: border-box;  
-    }  
-  
-    body {  
-      margin: 0;  
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;  
-      background: linear-gradient(180deg, #f7f8fc 0%, #eef2ff 45%, #e6ecff 100%);  
-      color: var(--text);  
-      -webkit-font-smoothing: antialiased;  
-    }  
-  
-    a {  
-      color: inherit;  
-      text-decoration: none;  
-    }  
-  
-    img {  
-      max-width: 100%;  
-      display: block;  
-    }  
-  
-    /* Layout */  
-  
-    .page {  
-      min-height: 100vh;  
-      display: flex;  
-      flex-direction: column;  
-      color: var(--text);  
-    }  
-  
-    .page-inner {  
-      max-width: 1180px;  
-      margin: 0 auto;  
-      padding: 18px 18px 48px;  
-    }  
-  
-    header {  
-      position: sticky;  
-      top: 0;  
-      z-index: 20;  
-      backdrop-filter: blur(14px);  
-      background: linear-gradient(to bottom, rgba(247, 248, 252, 0.98), rgba(247, 248, 252, 0.94), rgba(247, 248, 252, 0.9));  
-      border-bottom: 1px solid var(--border);  
-    }  
-  
-    .nav {  
-      max-width: 1180px;  
-      margin: 0 auto;  
-      padding: 10px 18px 10px;  
-      display: flex;  
-      align-items: center;  
-      justify-content: space-between;  
-      gap: 16px;  
-    }  
-  
-    .logo {  
-      display: flex;  
-      align-items: center;  
-      gap: 10px;  
-    }  
-  
-    .logo-mark {  
-      width: 38px;  
-      height: 38px;  
-      border-radius: 16px;  
-      background: radial-gradient(circle at 30% 20%, #fdf4d5 0, #e1bf62 30%, #b1832e 65%, #5d3a12 100%);  
-      display: flex;  
-      align-items: center;  
-      justify-content: center;  
-      box-shadow: var(--shadow-light);  
-      position: relative;  
-      overflow: hidden;  
-    }  
-  
-    .logo-mark::before {  
-      content: "";  
-      position: absolute;  
-      inset: 12%;  
-      border-radius: 20px;  
-      border: 1px solid rgba(255, 255, 255, 0.4);  
-    }  
-  
-    .logo-phoenix {  
-      width: 22px;  
-      height: 22px;  
-      border-radius: 50%;  
-      border: 1px solid rgba(255, 255, 255, 0.5);  
-      display: flex;  
-      align-items: center;  
-      justify-content: center;  
-      font-size: 11px;  
-      font-weight: 700;  
-      color: #5a4314;  
-      letter-spacing: 0.08em;  
-      background: rgba(255, 255, 255, 0.9);  
-    }  
-  
-    .logo-text {  
-      display: flex;  
-      flex-direction: column;  
-      gap: 2px;  
-    }  
-  
-    .logo-title {  
-      font-size: 13px;  
-      letter-spacing: 0.18em;  
-      text-transform: uppercase;  
-      font-weight: 600;  
-      color: var(--primary);  
-    }  
-  
-    .logo-subtitle {  
-      font-size: 10px;  
-      text-transform: uppercase;  
-      letter-spacing: 0.14em;  
-      color: var(--accent);  
-    }  
-  
-    .nav-links {  
-      display: flex;  
-      align-items: center;  
-      gap: 12px;  
-      font-size: 13px;  
-      position: relative;  
-    }  
-  
-    .nav-links a {  
-      padding: 8px 10px;  
-      border-radius: 999px;  
-      color: #3b4260;  
-    }  
-  
-    .nav-links a:hover {  
-      background: rgba(21, 40, 74, 0.06);  
-    }  
-  
-    .nav-cta {  
-      display: inline-flex;  
-      align-items: center;  
-      gap: 8px;  
-      padding: 9px 18px;  
-      border-radius: var(--radius-pill);  
-      border: 1px solid rgba(201, 154, 43, 0.7);  
-      background: linear-gradient(135deg, #fff7df, #f2d37a, #e1b857);  
-      box-shadow: 0 10px 24px rgba(201, 154, 43, 0.3);  
-      font-size: 13px;  
-      font-weight: 500;  
-      color: #4a3711;  
-    }  
-  
-    .nav-cta span:first-child {  
-      font-size: 10px;  
-      line-height: 1;  
-      color: #c03a2b;  
-    }  
-  
-    .nav-toggle {  
-      display: none;  
-      border: none;  
-      background: transparent;  
-      color: var(--primary);  
-      cursor: pointer;  
-    }  
-  
-    .nav-toggle span {  
-      font-size: 22px;  
-    }  
-  
-    /* Lang toggle */  
-  
-    .lang-toggle {  
-      display: inline-flex;  
-      padding: 3px;  
-      border-radius: 999px;  
-      background: rgba(255, 255, 255, 0.9);  
-      border: 1px solid var(--border);  
-      margin-left: 4px;  
-    }  
-  
-    .lang-btn {  
-      border: none;  
-      background: transparent;  
-      color: #4b5374;  
-      font-size: 11px;  
-      padding: 4px 9px;  
-      border-radius: 999px;  
-      cursor: pointer;  
-    }  
-  
-    .lang-btn.lang-active {  
-      background: rgba(201, 154, 43, 0.15);  
-      color: #3b2a08;  
-      font-weight: 600;  
-    }  
-  
-    .lang-en {  
-      display: none;  
-    }  
-  
-    /* Hero */  
-  
-    .hero {  
-      display: grid;  
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);  
-      gap: 34px;  
-      margin-top: 32px;  
-      align-items: center;  
-    }  
-  
-    .hero-left {  
-      display: flex;  
-      flex-direction: column;  
-      gap: 16px;  
-    }  
-  
-    .hero-badge {  
-      display: inline-flex;  
-      align-items: center;  
-      gap: 8px;  
-      padding: 6px 11px 6px 6px;  
-      border-radius: var(--radius-pill);  
-      background: rgba(255, 255, 255, 0.9);  
-      border: 1px solid var(--border);  
-      color: var(--muted);  
-      font-size: 11px;  
-      box-shadow: var(--shadow-light);  
-    }  
-  
-    .hero-badge-dot {  
-      width: 18px;  
-      height: 18px;  
-      border-radius: 999px;  
-      background: radial-gradient(circle at 30% 20%, #fdf4d5 0, #e1bf62 40%, #b1832e 70%, #5d3a12 100%);  
-      display: flex;  
-      align-items: center;  
-      justify-content: center;  
-      box-shadow: 0 0 16px rgba(201, 154, 43, 0.7);  
-    }  
-  
-    .hero-badge-dot::before {  
-      content: "";  
-      width: 8px;  
-      height: 8px;  
-      border-radius: 50%;  
-      border: 2px solid #fff3cf;  
-      background: #ffffff;  
-    }  
-  
-    .hero-title {  
-      font-size: clamp(26px, 3vw + 10px, 36px);  
-      line-height: 1.25;  
-      font-weight: 600;  
-      letter-spacing: 0.03em;  
-      color: var(--primary);  
-    }  
-  
-    .hero-title span {  
-      color: var(--accent);  
-    }  
-  
-    .hero-subtitle {  
-      font-size: 14px;  
-      color: var(--muted);  
-      max-width: 580px;  
-    }  
-  
-    .hero-highlights {  
-      display: flex;  
-      flex-wrap: wrap;  
-      gap: 10px;  
-      margin-top: 4px;  
-    }  
-  
-    .hero-chip {  
-      font-size: 11px;  
-      padding: 6px 12px;  
-      border-radius: 999px;  
-      border: 1px solid var(--border);  
-      background: var(--surface);  
-      color: #414867;  
-      box-shadow: 0 3px 8px rgba(34, 54, 107, 0.06);  
-    }  
-  
-    .hero-actions {  
-      display: flex;  
-      flex-wrap: wrap;  
-      gap: 12px;  
-      margin-top: 14px;  
-    }  
-  
-    .btn-primary {  
-      display: inline-flex;  
-      align-items: center;  
-      justify-content: center;  
-      gap: 8px;  
-      padding: 10px 20px;  
-      border-radius: var(--radius-pill);  
-      border: none;  
-      cursor: pointer;  
-      background: linear-gradient(135deg, #ffeac0, #f3cb6f, #e2af48);  
-      color: #4b3713;  
-      font-size: 13px;  
-      font-weight: 600;  
-      box-shadow: var(--shadow-soft);  
-      transition: var(--transition);  
-    }  
-  
-    .btn-primary:hover {  
-      transform: translateY(-1px);  
-      box-shadow: 0 18px 35px rgba(201, 154, 43, 0.35);  
-      filter: brightness(1.02);  
-    }  
-  
-    .btn-outline {  
-      display: inline-flex;  
-      align-items: center;  
-      justify-content: center;  
-      gap: 8px;  
-      padding: 10px 16px;  
-      border-radius: var(--radius-pill);  
-      border: 1px solid var(--border);  
-      cursor: pointer;  
-      background: rgba(255, 255, 255, 0.9);  
-      color: #3d4668;  
-      font-size: 13px;  
-      font-weight: 500;  
-      transition: var(--transition);  
-      box-shadow: 0 4px 10px rgba(34, 54, 107, 0.06);  
-    }  
-  
-    .btn-outline:hover {  
-      background: var(--surface-soft);  
-      transform: translateY(-1px);  
-    }  
-  
-    .hero-meta {  
-      display: flex;  
-      flex-wrap: wrap;  
-      gap: 18px;  
-      margin-top: 18px;  
-      font-size: 11px;  
-      color: var(--muted);  
-    }  
-  
-    .hero-meta-item {  
-      display: flex;  
-      flex-direction: column;  
-      gap: 4px;  
-    }  
-  
-    .hero-meta-label {  
-      text-transform: uppercase;  
-      letter-spacing: 0.14em;  
-      font-size: 10px;  
-      color: #9aa2c2;  
-    }  
-  
-    .hero-meta-value {  
-      font-weight: 500;  
-      color: #4a5174;  
-    }  
-  
-    .hero-right {  
-      position: relative;  
-    }  
-  
-    .hero-card {  
-      border-radius: var(--radius-lg);  
-      background: var(--surface);  
-      padding: 20px 18px 18px;  
-      border: 1px solid var(--border);  
-      box-shadow: var(--shadow-soft);  
-      position: relative;  
-      overflow: hidden;  
-    }  
-  
-    .hero-card::before {  
-      content: "";  
-      position: absolute;  
-      width: 180px;  
-      height: 180px;  
-      background: radial-gradient(circle, rgba(201, 154, 43, 0.25), transparent 65%);  
-      top: -40px;  
-      right: -30px;  
-      opacity: 1;  
-    }  
-  
-    .hero-card-header {  
-      display: flex;  
-      justify-content: space-between;  
-      align-items: flex-start;  
-      margin-bottom: 18px;  
-    }  
-  
-    .hero-card-title {  
-      font-size: 13px;  
-      text-transform: uppercase;  
-      letter-spacing: 0.16em;  
-      color: #4b557c;  
-    }  
-  
-    .hero-card-tag {  
-      font-size: 10px;  
-      padding: 5px 10px;  
-      border-radius: 999px;  
-      border: 1px solid rgba(201, 154, 43, 0.6);  
-      background: rgba(255, 245, 212, 0.9);  
-      color: #5c4316;  
-    }  
-  
-    .hero-grid {  
-      display: grid;  
-      grid-template-columns: 1.2fr 1fr;  
-      gap: 10px;  
-    }  
-  
-    .hero-block {  
-      border-radius: var(--radius-md);  
-      border: 1px solid var(--border);  
-      background: var(--surface-soft);  
-      padding: 10px 11px;  
-      font-size: 11px;  
-      color: #4a5174;  
-    }  
-  
-    .hero-block-title {  
-      font-size: 10px;  
-      text-transform: uppercase;  
-      letter-spacing: 0.12em;  
-      color: #8a92bb;  
-      margin-bottom: 6px;  
-    }  
-  
-    .hero-block-list {  
-      display: flex;  
-      flex-direction: column;  
-      gap: 4px;  
-    }  
-  
-    .hero-bullet {  
-      display: flex;  
-      align-items: center;  
-      gap: 6px;  
-    }  
-  
-    .hero-dot {  
-      width: 6px;  
-      height: 6px;  
-      border-radius: 999px;  
-      background: #e3b858;  
-    }  
-  
-    .hero-bullet span {  
-      color: #404669;  
-    }  
-  
-    .hero-score {  
-      display: flex;  
-      align-items: baseline;  
-      gap: 4px;  
-      font-size: 20px;  
-      font-weight: 600;  
-      color: #c89a30;  
-    }  
-  
-    .hero-score small {  
-      font-size: 11px;  
-      font-weight: 400;  
-      color: #6d7390;  
-    }  
-  
-    .hero-footer {  
-      display: flex;  
-      justify-content: space-between;  
-      align-items: center;  
-      margin-top: 12px;  
-      padding-top: 10px;  
-      border-top: 1px dashed #d5d9ee;  
-      font-size: 10px;  
-      color: #6a7090;  
-    }  
-  
-    .hero-footer strong {  
-      color: #b38724;  
-      font-weight: 500;  
-    }  
-  
-    .hero-footer-pill {  
-      display: inline-flex;  
-      align-items: center;  
-      gap: 6px;  
-      padding: 6px 10px;  
-      border-radius: 999px;  
-      background: #f5f6ff;  
-      border: 1px solid var(--border);  
-      color: #4b5374;  
-    }  
-  
-    /* Sections */  
-  
-    main {  
-      margin-top: 36px;  
-    }  
-  
-    section {  
-      margin-bottom: 40px;  
-    }  
-  
-    .section-header {  
-      display: flex;  
-      justify-content: space-between;  
-      align-items: flex-end;  
-      gap: 14px;  
-      margin-bottom: 16px;  
-    }  
-  
-    .section-title {  
-      font-size: 18px;  
-      font-weight: 600;  
-      letter-spacing: 0.08em;  
-      text-transform: uppercase;  
-      color: var(--primary);  
-    }  
-  
-    .section-kicker {  
-      font-size: 11px;  
-      color: #8a92bb;  
-      text-transform: uppercase;  
-      letter-spacing: 0.14em;  
-      margin-bottom: 4px;  
-    }  
-  
-    .section-subtitle {  
-      font-size: 12px;  
-      color: var(--muted);  
-      max-width: 460px;  
-    }  
-  
-    .card-grid {  
-      display: grid;  
-      grid-template-columns: repeat(3, minmax(0, 1fr));  
-      gap: 16px;  
-    }  
-  
-    .card {  
-      border-radius: var(--radius-md);  
-      background: var(--surface);  
-      border: 1px solid var(--border);  
-      padding: 14px 14px 16px;  
-      box-shadow: var(--shadow-light);  
-      font-size: 12px;  
-      color: #4a5072;  
-    }  
-  
-    .card-pill {  
-      display: inline-flex;  
-      align-items: center;  
-      gap: 6px;  
-      padding: 5px 9px;  
-      border-radius: 999px;  
-      background: var(--accent-soft);  
-      color: #7a5b1a;  
-      font-size: 10px;  
-      margin-bottom: 8px;  
-    }  
-  
-    .card-title {  
-      font-size: 14px;  
-      font-weight: 500;  
-      margin-bottom: 8px;  
-      color: var(--primary);  
-    }  
-  
-    .card p {  
-      margin: 0;  
-      color: var(--muted);  
-      line-height: 1.5;  
-    }  
-  
-    .card-list {  
-      margin: 10px 0 0;  
-      padding-left: 16px;  
-      color: var(--muted);  
-    }  
-  
-    .card-list li {  
-      margin-bottom: 4px;  
-    }  
-  
-    /* Two column section */  
-  
-    .two-col {  
-      display: grid;  
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);  
-      gap: 18px;  
-      align-items: flex-start;  
-    }  
-  
-    .box {  
-      border-radius: var(--radius-md);  
-      background: var(--surface);  
-      border: 1px solid var(--border);  
-      padding: 14px 14px 16px;  
-      box-shadow: var(--shadow-light);  
-      font-size: 12px;  
-      color: #4a5072;  
-    }  
-  
-    .box h3 {  
-      margin-top: 0;  
-      margin-bottom: 8px;  
-      font-size: 14px;  
-      color: var(--primary);  
-    }  
-  
-    .box p {  
-      margin-top: 0;  
-      margin-bottom: 8px;  
-      color: var(--muted);  
-      line-height: 1.6;  
-    }  
-  
-    .tagline {  
-      font-size: 11px;  
-      color: #8a92bb;  
-      text-transform: uppercase;  
-      letter-spacing: 0.16em;  
-      margin-bottom: 4px;  
-    }  
-  
-    .en-tagline {  
-      font-size: 11px;  
-      color: var(--muted);  
-      margin-top: 3px;  
-      font-style: italic;  
-    }  
-  
-    .values-list {  
-      display: grid;  
-      grid-template-columns: repeat(2, minmax(0, 1fr));  
-      gap: 8px;  
-      margin-top: 8px;  
-    }  
-  
-    .value-item {  
-      padding: 8px 9px;  
-      border-radius: 13px;  
-      background: #f6f7ff;  
-      border: 1px dashed #cfd4f0;  
-      font-size: 11px;  
-      color: #4a5072;  
-    }  
-  
-    .value-item strong {  
-      display: block;  
-      margin-bottom: 4px;  
-      color: #b1832e;  
-      font-weight: 500;  
-    }  
-  
-    /* Contact */  
-  
-    .contact-grid {  
-      display: grid;  
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);  
-      gap: 18px;  
-    }  
-  
-    .contact-info-item {  
-      display: flex;  
-      align-items: flex-start;  
-      gap: 10px;  
-      margin-bottom: 8px;  
-      font-size: 12px;  
-      color: var(--muted);  
-    }  
-  
-    .contact-icon {  
-      width: 24px;  
-      height: 24px;  
-      border-radius: 8px;  
-      background: #e6ebff;  
-      display: flex;  
-      align-items: center;  
-      justify-content: center;  
-      font-size: 13px;  
-      color: #b1832e;  
-      box-shadow: 0 3px 8px rgba(34, 54, 107, 0.08);  
-    }  
-  
-    form {  
-      display: flex;  
-      flex-direction: column;  
-      gap: 10px;  
-      margin-top: 4px;  
-    }  
-  
-    label {  
-      font-size: 11px;  
-      color: #4b5374;  
-    }  
-  
-    input, textarea {  
-      width: 100%;  
-      border-radius: 10px;  
-      border: 1px solid rgba(180, 188, 224, 0.9);  
-      background: #ffffff;  
-      color: var(--text);  
-      padding: 8px 10px;  
-      font-size: 12px;  
-      font-family: inherit;  
-      outline: none;  
-      transition: var(--transition);  
-      resize: vertical;  
-      min-height: 38px;  
-    }  
-  
-    input::placeholder, textarea::placeholder {  
-      color: #a0a7c4;  
-    }  
-  
-    input:focus, textarea:focus {  
-      border-color: var(--accent);  
-      box-shadow: 0 0 0 1px rgba(201, 154, 43, 0.4);  
-      background: #fffdf6;  
-    }  
-  
-    textarea {  
-      min-height: 90px;  
-    }  
-  
-    .form-row {  
-      display: grid;  
-      grid-template-columns: repeat(2, minmax(0, 1fr));  
-      gap: 10px;  
-    }  
-  
-    .form-hint {  
-      font-size: 11px;  
-      color: #8d93b7;  
-      margin-top: 4px;  
-    }  
-  
-    .btn-submit {  
-      margin-top: 4px;  
-      align-self: flex-start;  
-    }  
-  
-    /* Footer */  
-  
-    footer {  
-      border-top: 1px solid var(--border);  
-      margin-top: 22px;  
-      padding-top: 14px;  
-      font-size: 11px;  
-      color: var(--muted);  
-    }  
-  
-    .footer-top {  
-      display: flex;  
-      flex-wrap: wrap;  
-      justify-content: space-between;  
-      gap: 10px;  
-      margin-bottom: 8px;  
-    }  
-  
-    .footer-domain {  
-      font-weight: 500;  
-      color: var(--primary);  
-    }  
-  
-    .footer-bottom {  
-      display: flex;  
-      flex-wrap: wrap;  
-      gap: 12px;  
-      justify-content: space-between;  
-      align-items: center;  
-    }  
-  
-    .footer-bottom a {  
-      color: #5e6584;  
-      font-size: 11px;  
-    }  
-  
-    /* Responsive */  
-  
-    @media (max-width: 900px) {  
-      .hero {  
-        grid-template-columns: minmax(0, 1fr);  
-      }  
-  
-      .hero-right {  
-        order: -1;  
-      }  
-  
-      .card-grid {  
-        grid-template-columns: repeat(2, minmax(0, 1fr));  
-      }  
-  
-      .two-col,  
-      .contact-grid {  
-        grid-template-columns: minmax(0, 1fr);  
-      }  
-    }  
-  
-    @media (max-width: 720px) {  
-      .nav-links {  
-        display: none;  
-      }  
-  
-      .nav-toggle {  
-        display: inline-flex;  
-      }  
-  
-      .nav-links.open {  
-        position: absolute;  
-        inset: 52px 16px auto 16px;  
-        flex-direction: column;  
-        padding: 10px;  
-        border-radius: 18px;  
-        background: #ffffff;  
-        border: 1px solid var(--border);  
-        box-shadow: var(--shadow-soft);  
-      }  
-  
-      .card-grid {  
-        grid-template-columns: minmax(0, 1fr);  
-      }  
-  
-      .page-inner {  
-        padding-inline: 16px;  
-      }  
-  
-      .hero-meta {  
-        flex-direction: column;  
-      }  
-    }  
-  </style>  
-</head>  
-<body>  
-  <div class="page">  
-    <header>  
-      <nav class="nav">  
-        <a href="#top" class="logo">  
-          <div class="logo-mark">  
-            <div class="logo-phoenix">PH</div>  
-          </div>  
-          <div class="logo-text">  
-            <div class="logo-title">LE PHŒNIX — ACHILLE COMOE</div>  
-            <div class="logo-subtitle">Legal Advisory</div>  
-          </div>  
-        </a>  
-        <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">  
-          <span>☰</span>  
-        </button>  
-        <div class="nav-links" id="navLinks">  
-          <a href="#expertises">  
-            <span class="lang lang-fr">Expertises</span>  
-            <span class="lang lang-en">Expertise</span>  
-          </a>  
-          <a href="#approche">  
-            <span class="lang lang-fr">Approche</span>  
-            <span class="lang lang-en">Approach</span>  
-          </a>  
-          <a href="#fondateur">  
-            <span class="lang lang-fr">Fondateur</span>  
-            <span class="lang lang-en">Founder</span>  
-          </a>  
-          <a href="#publications">  
-            <span class="lang lang-fr">Publications</span>  
-            <span class="lang lang-en">Publications</span>  
-          </a>  
-          <a href="#contact">  
-            <span class="lang lang-fr">Contact</span>  
-            <span class="lang lang-en">Contact</span>  
-          </a>  
-          <a href="#contact" class="nav-cta">  
-            <span>●</span>  
-            <span class="lang lang-fr">Consultation stratégique</span>  
-            <span class="lang lang-en">Strategic consultation</span>  
-          </a>  
-          <div class="lang-toggle">  
-            <button class="lang-btn lang-active" data-lang="fr">FR</button>  
-            <button class="lang-btn" data-lang="en">EN</button>  
-          </div>  
-        </div>  
-      </nav>  
-    </header>  
-  
-    <div class="page-inner" id="top">  
-      <section class="hero">  
-        <div class="hero-left">  
-          <div class="hero-badge">  
-            <div class="hero-badge-dot"></div>  
-            <span class="lang lang-fr">Cabinet de conseil juridique & stratégique</span>  
-            <span class="lang lang-en">Strategic legal advisory boutique</span>  
-          </div>  
-          <h1 class="hero-title">  
-            <span class="lang lang-fr">  
-              Anticiper le risque, sécuriser la décision, protéger la responsabilité.  
-              <br><span>LE PHŒNIX — ACHILLE COMOE</span>  
-            </span>  
-            <span class="lang lang-en">  
-              Anticipate risk, secure decisions, protect liability.  
-              <br><span>LE PHŒNIX — ACHILLE COMOE</span>  
-            </span>  
-          </h1>  
-          <p class="hero-subtitle">  
-            <span class="lang lang-fr">  
-              Cabinet indépendant basé en Côte d’Ivoire, dédié à la responsabilité civile et pénale, à la conformité réglementaire,  
-              au droit de l’environnement et à la gestion stratégique des risques au service des entreprises, des institutions  
-              et des acteurs privés en Afrique et au-delà.  
-            </span>  
-            <span class="lang lang-en">  
-              Independent advisory practice based in Côte d’Ivoire, dedicated to civil and criminal liability, regulatory compliance,  
-              environmental law and strategic risk management for companies, institutions and private actors in Africa and beyond.  
-            </span>  
-          </p>  
-          <div class="hero-highlights">  
-            <div class="hero-chip">  
-              <span class="lang lang-fr">Responsabilité civile & pénale</span>  
-              <span class="lang lang-en">Civil & criminal liability</span>  
-            </div>  
-            <div class="hero-chip">  
-              <span class="lang lang-fr">Droit de l’environnement & ESG</span>  
-              <span class="lang lang-en">Environmental law & ESG</span>  
-            </div>  
-            <div class="hero-chip">  
-              <span class="lang lang-fr">Gouvernance & conformité</span>  
-              <span class="lang lang-en">Governance & compliance</span>  
-            </div>  
-            <div class="hero-chip">  
-              <span class="lang lang-fr">Contrats & gestion des risques</span>  
-              <span class="lang lang-en">Contracts & risk allocation</span>  
-            </div>  
-          </div>  
-          <div class="hero-actions">  
-            <a href="#contact" class="btn-primary">  
-              <span class="lang lang-fr">Prendre contact</span>  
-              <span class="lang lang-en">Get in touch</span>  
-              <span>→</span>  
-            </a>  
-            <a href="#expertises" class="btn-outline">  
-              <span class="lang lang-fr">Découvrir nos expertises</span>  
-              <span class="lang lang-en">Discover our expertise</span>  
-            </a>  
-          </div>  
-          <div class="hero-meta">  
-            <div class="hero-meta-item">  
-              <div class="hero-meta-label">  
-                <span class="lang lang-fr">Positionnement</span>  
-                <span class="lang lang-en">Positioning</span>  
-              </div>  
-              <div class="hero-meta-value">  
-                <span class="lang lang-fr">Responsabilité, conformité, environnement</span>  
-                <span class="lang lang-en">Liability, compliance, environment</span>  
-              </div>  
-            </div>  
-            <div class="hero-meta-item">  
-              <div class="hero-meta-label">  
-                <span class="lang lang-fr">Clientèle</span>  
-                <span class="lang lang-en">Clients</span>  
-              </div>  
-              <div class="hero-meta-value">  
-                <span class="lang lang-fr">Entreprises, institutions, ONG, investisseurs</span>  
-                <span class="lang lang-en">Corporates, institutions, NGOs, investors</span>  
-              </div>  
-            </div>  
-            <div class="hero-meta-item">  
-              <div class="hero-meta-label">  
-                <span class="lang lang-fr">Zone d’intervention</span>  
-                <span class="lang lang-en">Geographical focus</span>  
-              </div>  
-              <div class="hero-meta-value">  
-                <span class="lang lang-fr">Afrique de l’Ouest & espaces transnationaux</span>  
-                <span class="lang lang-en">West Africa & cross-border projects</span>  
-              </div>  
-            </div>  
-          </div>  
-        </div>  
-  
-        <div class="hero-right">  
-          <div class="hero-card">  
-            <div class="hero-card-header">  
-              <div>  
-                <div class="hero-card-title">  
-                  <span class="lang lang-fr">Tableau de bord du Cabinet</span>  
-                  <span class="lang lang-en">Firm overview</span>  
-                </div>  
-                <div style="font-size:11px;color:#6d7390;margin-top:4px;">  
-                  <span class="lang lang-fr">  
-                    Une expertise au croisement du droit privé, de la gouvernance, du contentieux complexe et du risque environnemental.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    An expertise at the crossroads of private law, governance, complex disputes and environmental risk.  
-                  </span>  
-                </div>  
-              </div>  
-              <div class="hero-card-tag">  
-                <span class="lang lang-fr">Focus risques & responsabilité</span>  
-                <span class="lang lang-en">Risk & liability focus</span>  
-              </div>  
-            </div>  
-  
-            <div class="hero-grid">  
-              <div class="hero-block">  
-                <div class="hero-block-title">  
-                  <span class="lang lang-fr">Domaines clés</span>  
-                  <span class="lang lang-en">Key areas</span>  
-                </div>  
-                <div class="hero-block-list">  
-                  <div class="hero-bullet">  
-                    <div class="hero-dot"></div>  
-                    <span class="lang lang-fr">Responsabilité civile & pénale environnementale</span>  
-                    <span class="lang lang-en">Civil & criminal environmental liability</span>  
-                  </div>  
-                  <div class="hero-bullet">  
-                    <div class="hero-dot"></div>  
-                    <span class="lang lang-fr">Conformité réglementaire & gouvernance</span>  
-                    <span class="lang lang-en">Regulatory compliance & governance</span>  
-                  </div>  
-                  <div class="hero-bullet">  
-                    <div class="hero-dot"></div>  
-                    <span class="lang lang-fr">Contrats, clauses de risque & arbitrage</span>  
-                    <span class="lang lang-en">Contracts, risk clauses & arbitration</span>  
-                  </div>  
-                </div>  
-              </div>  
-              <div class="hero-block">  
-                <div class="hero-block-title">  
-                  <span class="lang lang-fr">Approche</span>  
-                  <span class="lang lang-en">Approach</span>  
-                </div>  
-                <p style="margin:0 0 6px;color:#4b5374;">  
-                  <span class="lang lang-fr">  
-                    Analyse juridique, stratégie de prévention et accompagnement opérationnel des décideurs.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Legal analysis, preventive strategy and operational support for decision-makers.  
-                  </span>  
-                </p>  
-                <div class="hero-score">  
-                  360°  
-                  <small>  
-                    <span class="lang lang-fr">Vision intégrée du risque</span>  
-                    <span class="lang lang-en">Integrated risk perspective</span>  
-                  </small>  
-                </div>  
-              </div>  
-            </div>  
-  
-            <div class="hero-footer">  
-              <div>  
-                <strong>  
-                  <span class="lang lang-fr">Dépassement du litige</span>  
-                  <span class="lang lang-en">Beyond litigation</span>  
-                </strong>  
-                <span class="lang lang-fr"> : le droit comme outil de prévention, de décision et d’influence.</span>  
-                <span class="lang lang-en">: law as a tool for prevention, decision-making and influence.</span>  
-              </div>  
-              <div class="hero-footer-pill">  
-                <span>FR / EN</span>  
-                <span style="opacity:0.7;">Advisory • Training • Advocacy</span>  
-              </div>  
-            </div>  
-          </div>  
-        </div>  
-      </section>  
-  
-      <main>  
-        <!-- EXPERTISES -->  
-        <section id="expertises">  
-          <div class="section-header">  
-            <div>  
-              <div class="section-kicker">  
-                <span class="lang lang-fr">Expertises</span>  
-                <span class="lang lang-en">Expertise</span>  
-              </div>  
-              <h2 class="section-title">  
-                <span class="lang lang-fr">Responsabilité, risque, gouvernance</span>  
-                <span class="lang lang-en">Liability, risk, governance</span>  
-              </h2>  
-            </div>  
-            <p class="section-subtitle">  
-              <span class="lang lang-fr">  
-                Le Cabinet intervient en conseil, en appui stratégique et en accompagnement opérationnel sur l’ensemble de la chaîne  
-                du risque : anticiper, structurer, sécuriser, défendre.  
-              </span>  
-              <span class="lang lang-en">  
-                The Firm provides advisory, strategic support and operational assistance across the entire risk chain:  
-                anticipate, structure, secure, defend.  
-              </span>  
-            </p>  
-          </div>  
-  
-          <div class="card-grid">  
-            <article class="card">  
-              <div class="card-pill">  
-                <span class="lang lang-fr">Responsabilité & contentieux</span>  
-                <span class="lang lang-en">Liability & disputes</span>  
-              </div>  
-              <h3 class="card-title">  
-                <span class="lang lang-fr">Responsabilité civile et pénale</span>  
-                <span class="lang lang-en">Civil and criminal liability</span>  
-              </h3>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Accompagnement sur les fondements et la mise en œuvre de la responsabilité civile et pénale, notamment en matière  
-                  d’atteintes environnementales, de risques industriels et de dommages complexes (pollutions, catastrophes, préjudice écologique).  
-                </span>  
-                <span class="lang lang-en">  
-                  Support on the grounds and implementation of civil and criminal liability, particularly for environmental damage,  
-                  industrial risks and complex harms (pollution, disasters, environmental damage).  
-                </span>  
-              </p>  
-              <ul class="card-list">  
-                <li>  
-                  <span class="lang lang-fr">Analyse des fondements de responsabilité et des voies d’action</span>  
-                  <span class="lang lang-en">Analysis of liability grounds and legal avenues</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Stratégies de prévention du contentieux et de gestion de crise</span>  
-                  <span class="lang lang-en">Litigation-prevention strategies and crisis management</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Appui aux équipes internes et aux avocats plaidants</span>  
-                  <span class="lang lang-en">Support to in-house teams and trial lawyers</span>  
-                </li>  
-              </ul>  
-            </article>  
-  
-            <article class="card">  
-              <div class="card-pill">  
-                <span class="lang lang-fr">Conformité & environnement</span>  
-                <span class="lang lang-en">Compliance & environment</span>  
-              </div>  
-              <h3 class="card-title">  
-                <span class="lang lang-fr">Conformité réglementaire & ESG</span>  
-                <span class="lang lang-en">Regulatory compliance & ESG</span>  
-              </h3>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Mise en cohérence des pratiques avec les exigences légales, réglementaires et conventionnelles,  
-                  en particulier en droit de l’environnement, en gouvernance durable et en critères ESG, avec une attention  
-                  particulière aux mouvements transfrontières illicites de déchets dangereux.  
-                </span>  
-                <span class="lang lang-en">  
-                  Aligning practices with legal, regulatory and treaty-based requirements, especially in environmental law,  
-                  sustainable governance and ESG criteria, with a specific focus on illicit transboundary movements of hazardous waste.  
-                </span>  
-              </p>  
-              <ul class="card-list">  
-                <li>  
-                  <span class="lang lang-fr">Cartographie des obligations, des risques et des zones de vulnérabilité</span>  
-                  <span class="lang lang-en">Mapping of obligations, risks and vulnerability areas</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Politiques internes, procédures, codes de conduite et chartes éthiques</span>  
-                  <span class="lang lang-en">Internal policies, procedures, codes of conduct and ethics charters</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Veille juridique ciblée et sensibilisation des équipes</span>  
-                  <span class="lang lang-en">Targeted legal monitoring and staff awareness-raising</span>  
-                </li>  
-              </ul>  
-            </article>  
-  
-            <article class="card">  
-              <div class="card-pill">  
-                <span class="lang lang-fr">Contrats & opérations</span>  
-                <span class="lang lang-en">Contracts & transactions</span>  
-              </div>  
-              <h3 class="card-title">  
-                <span class="lang lang-fr">Contrats, clauses de risque & arbitrage</span>  
-                <span class="lang lang-en">Contracts, risk clauses & arbitration</span>  
-              </h3>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Intégration des enjeux de responsabilité, de risque et de règlement des différends dans les contrats  
-                  commerciaux, de partenariat, d’investissement ou de projet, y compris les opérations à dimension environnementale.  
-                </span>  
-                <span class="lang lang-en">  
-                  Integrating liability, risk and dispute resolution issues into commercial, partnership, investment  
-                  and project contracts, including environmentally sensitive operations.  
-                </span>  
-              </p>  
-              <ul class="card-list">  
-                <li>  
-                  <span class="lang lang-fr">Clauses de responsabilité, garanties et limitations de réparation</span>  
-                  <span class="lang lang-en">Liability clauses, guarantees and limitations</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Clauses environnementales, de conformité et de due diligence</span>  
-                  <span class="lang lang-en">Environmental, compliance and due diligence clauses</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Clauses compromissoires et mécanismes d’arbitrage ou de médiation</span>  
-                  <span class="lang lang-en">Arbitration clauses and ADR mechanisms</span>  
-                </li>  
-              </ul>  
-            </article>  
-          </div>  
-        </section>  
-  
-        <!-- APPROCHE & VALEURS -->  
-        <section id="approche">  
-          <div class="section-header">  
-            <div>  
-              <div class="section-kicker">  
-                <span class="lang lang-fr">Approche</span>  
-                <span class="lang lang-en">Approach</span>  
-              </div>  
-              <h2 class="section-title">  
-                <span class="lang lang-fr">Une vision stratégique du droit</span>  
-                <span class="lang lang-en">A strategic vision of law</span>  
-              </h2>  
-            </div>  
-            <p class="section-subtitle">  
-              <span class="lang lang-fr">  
-                Le Cabinet conçoit le droit comme un levier de protection, de crédibilité et de performance pour les décideurs.  
-              </span>  
-              <span class="lang lang-en">  
-                The Firm treats law as a lever for protection, credibility and performance for decision-makers.  
-              </span>  
-            </p>  
-          </div>  
-  
-          <div class="two-col">  
-            <div class="box">  
-              <div class="tagline">  
-                <span class="lang lang-fr">Positionnement</span>  
-                <span class="lang lang-en">Positioning</span>  
-              </div>  
-              <h3>  
-                <span class="lang lang-fr">Un cabinet tourné vers la décision stratégique</span>  
-                <span class="lang lang-en">A firm focused on strategic decision-making</span>  
-              </h3>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Le raisonnement ici présenté soutient que la valeur ajoutée du conseil juridique réside dans sa capacité  
-                  à éclairer la décision, à anticiper l’aléa et à documenter la responsabilité. Le Cabinet intervient ainsi  
-                  en amont des projets sensibles, des opérations exposées ou des situations de crise afin de structurer des  
-                  choix juridiquement solides et défendables.  
-                </span>  
-                <span class="lang lang-en">  
-                  The reasoning developed here is that legal advisory truly adds value when it clarifies decisions,  
-                  anticipates risks and documents liability. The Firm therefore intervenes upstream in sensitive projects,  
-                  high-exposure operations or crisis situations to structure legally sound and defensible choices.  
-                </span>  
-              </p>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Cette approche s’adresse en priorité aux entreprises, institutions, ONG et acteurs engagés dans des secteurs  
-                  à forte intensité de risque (environnement, énergie, infrastructures, projets transnationaux, investissements),  
-                  où la responsabilité ne se limite plus à la réparation, mais devient un enjeu de gouvernance, de réputation  
-                  et de durabilité.  
-                </span>  
-                <span class="lang lang-en">  
-                  This approach primarily targets companies, institutions, NGOs and actors involved in high-risk sectors  
-                  (environment, energy, infrastructure, cross-border projects, investments), where liability is no longer  
-                  limited to compensation but becomes a governance, reputation and sustainability issue.  
-                </span>  
-              </p>  
-              <p class="en-tagline">  
-                <span class="lang lang-fr">  
-                  Le droit n’est pas seulement une contrainte – c’est un instrument stratégique de protection de la valeur,  
-                  de la réputation et de l’impact à long terme.  
-                </span>  
-                <span class="lang lang-en">  
-                  Law is not only a constraint – it is a strategic tool to protect value, reputation and long-term impact.  
-                </span>  
-              </p>  
-            </div>  
-  
-            <div class="box">  
-              <div class="tagline">  
-                <span class="lang lang-fr">Valeurs</span>  
-                <span class="lang lang-en">Values</span>  
-              </div>  
-              <h3>  
-                <span class="lang lang-fr">Exigence, intégrité, pédagogie</span>  
-                <span class="lang lang-en">Rigour, integrity, clarity</span>  
-              </h3>  
-              <div class="values-list">  
-                <div class="value-item">  
-                  <strong>  
-                    <span class="lang lang-fr">Exigence juridique</span>  
-                    <span class="lang lang-en">Legal rigour</span>  
-                  </strong>  
-                  <span class="lang lang-fr">  
-                    Analyses fondées sur la rigueur du droit positif, l’argumentation doctrinale et la jurisprudence pertinente.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Analyses grounded in positive law, doctrine and relevant case law.  
-                  </span>  
-                </div>  
-                <div class="value-item">  
-                  <strong>  
-                    <span class="lang lang-fr">Indépendance & éthique</span>  
-                    <span class="lang lang-en">Independence & ethics</span>  
-                  </strong>  
-                  <span class="lang lang-fr">  
-                    Conseil loyal, protection de la confiance du client et vigilance face aux conflits d’intérêts.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Loyal advice, protection of client trust and vigilance regarding conflicts of interest.  
-                  </span>  
-                </div>  
-                <div class="value-item">  
-                  <strong>  
-                    <span class="lang lang-fr">Clarté & pédagogie</span>  
-                    <span class="lang lang-en">Clarity & pedagogy</span>  
-                  </strong>  
-                  <span class="lang lang-fr">  
-                    Restitution compréhensible pour le décideur : notes, schémas, scénarios de risque et options possibles.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Clear deliverables for decision-makers: memos, visuals, risk scenarios and options.  
-                  </span>  
-                </div>  
-                <div class="value-item">  
-                  <strong>  
-                    <span class="lang lang-fr">Vision long terme</span>  
-                    <span class="lang lang-en">Long-term view</span>  
-                  </strong>  
-                  <span class="lang lang-fr">  
-                    Intégration des enjeux de durabilité, d’impact social et d’acceptabilité environnementale des projets.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Integration of sustainability, social impact and environmental acceptability considerations.  
-                  </span>  
-                </div>  
-              </div>  
-            </div>  
-          </div>  
-        </section>  
-  
-        <!-- FONDATEUR -->  
-        <section id="fondateur">  
-          <div class="section-header">  
-            <div>  
-              <div class="section-kicker">  
-                <span class="lang lang-fr">Fondateur</span>  
-                <span class="lang lang-en">Founder</span>  
-              </div>  
-              <h2 class="section-title">  
-                <span class="lang lang-fr">Le Phœnix, une signature</span>  
-                <span class="lang lang-en">The Phoenix, a signature</span>  
-              </h2>  
-            </div>  
-            <p class="section-subtitle">  
-              <span class="lang lang-fr">  
-                Un profil à la croisée du droit privé, de la responsabilité environnementale et de l’engagement civique.  
-              </span>  
-              <span class="lang lang-en">  
-                A profile at the intersection of private law, environmental liability and civic engagement.  
-              </span>  
-            </p>  
-          </div>  
-  
-          <div class="two-col">  
-            <div class="box">  
-              <h3>  
-                <span class="lang lang-fr">Achille COMOE — Fondateur du Cabinet</span>  
-                <span class="lang lang-en">Achille COMOE — Founder</span>  
-              </h3>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Il est soutenu ici que l’accompagnement des décideurs dans les dossiers sensibles exige une double culture :  
-                  la maîtrise des mécanismes classiques de la responsabilité civile et pénale, et la compréhension fine des  
-                  dynamiques économiques, politiques et sociales dans lesquelles s’inscrivent les projets.  
-                </span>  
-                <span class="lang lang-en">  
-                  The view defended here is that supporting decision-makers in sensitive matters requires a double culture:  
-                  mastery of classical civil and criminal liability mechanisms, and a nuanced understanding of the economic,  
-                  political and social dynamics in which projects are embedded.  
-                </span>  
-              </p>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Docteur en droit privé, spécialisé en responsabilité pour mouvement transfrontière illicite de déchets dangereux  
-                  dans les États du Golfe de Guinée, Achille COMOE développe une expertise approfondie en responsabilité  
-                  environnementale, gouvernance des risques et contentieux complexes. Son expérience au sein de réseaux  
-                  académiques, associatifs et internationaux nourrit une approche à la fois exigeante, engagée et tournée vers l’impact.  
-                </span>  
-                <span class="lang lang-en">  
-                  Holding a PhD in Private Law with a thesis on liability for illicit transboundary movements of hazardous waste  
-                  in Gulf of Guinea States, Achille COMOE has deep expertise in environmental liability, risk governance and  
-                  complex disputes. His involvement in academic, civil society and international networks feeds an exacting,  
-                  engaged and impact-oriented approach.  
-                </span>  
-              </p>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Le Cabinet LE PHŒNIX — ACHILLE COMOE assume ce positionnement : offrir un conseil juridique de haut niveau,  
-                  capable d’articuler l’analyse technique, la stratégie de prévention et la dimension éthique des décisions.  
-                </span>  
-                <span class="lang lang-en">  
-                  The Firm LE PHŒNIX — ACHILLE COMOE embraces this positioning: delivering high-level legal advice that combines  
-                  technical analysis, preventive strategy and the ethical dimension of decision-making.  
-                </span>  
-              </p>  
-            </div>  
-  
-            <div class="box">  
-              <div class="tagline">  
-                <span class="lang lang-fr">Quelques repères</span>  
-                <span class="lang lang-en">Key milestones</span>  
-              </div>  
-              <ul class="card-list" style="margin-top:6px;">  
-                <li>  
-                  <span class="lang lang-fr">Doctorat en droit privé – responsabilité environnementale et mouvements transfrontières de déchets dangereux</span>  
-                  <span class="lang lang-en">PhD in Private Law – environmental liability and transboundary movements of hazardous waste</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Expertise sur les Conventions de Bâle et de Bamako et leur réception en Afrique de l’Ouest</span>  
-                  <span class="lang lang-en">Expertise on the Basel and Bamako Conventions and their implementation in West Africa</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Travaux sur la responsabilité civile et pénale environnementale dans le Golfe de Guinée</span>  
-                  <span class="lang lang-en">Research on civil and criminal environmental liability in the Gulf of Guinea</span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">Engagement dans des initiatives de paix, de gouvernance et de jeunesse en Afrique</span>  
-                  <span class="lang lang-en">Engagement in peace, governance and youth initiatives in Africa</span>  
-                </li>  
-              </ul>  
-              <p style="margin-top:10px;">  
-                <span class="lang lang-fr">  
-                  Cette combinaison d’expertise académique et de terrain permet un conseil adapté aux enjeux locaux  
-                  comme aux standards internationaux.  
-                </span>  
-                <span class="lang lang-en">  
-                  This combination of academic and field expertise enables advice tailored both to local realities and  
-                  international standards.  
-                </span>  
-              </p>  
-            </div>  
-          </div>  
-        </section>  
-  
-        <!-- PUBLICATIONS / THESE / CONFERENCES -->  
-        <section id="publications">  
-          <div class="section-header">  
-            <div>  
-              <div class="section-kicker">  
-                <span class="lang lang-fr">Publications & interventions</span>  
-                <span class="lang lang-en">Publications & speaking</span>  
-              </div>  
-              <h2 class="section-title">  
-                <span class="lang lang-fr">Thèse, travaux, conférences</span>  
-                <span class="lang lang-en">Thesis, works, conferences</span>  
-              </h2>  
-            </div>  
-            <p class="section-subtitle">  
-              <span class="lang lang-fr">  
-                La production scientifique et les interventions publiques du Cabinet nourrissent le conseil stratégique,  
-                en particulier sur la responsabilité environnementale et les mouvements transfrontières de déchets dangereux.  
-              </span>  
-              <span class="lang lang-en">  
-                The Firm’s academic work and public interventions feed into strategic advisory,  
-                particularly on environmental liability and illicit transboundary movements of hazardous waste.  
-              </span>  
-            </p>  
-          </div>  
-  
-          <div class="two-col">  
-            <div class="box">  
-              <h3>  
-                <span class="lang lang-fr">Thèse de doctorat</span>  
-                <span class="lang lang-en">Doctoral thesis</span>  
-              </h3>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Titre : <strong>« La responsabilité pour mouvement transfrontière illicite de déchets dangereux : Cas des États du Golfe de Guinée »</strong>.  
-                  Cette recherche analyse, en droit privé, les régimes de responsabilité civile et pénale applicables aux flux illicites  
-                  de déchets dangereux, en examinant les difficultés d’imputation, de prévention et de réparation dans les ordres juridiques  
-                  nationaux.  
-                </span>  
-                <span class="lang lang-en">  
-                  Title: <strong>“Liability for illicit transboundary movement of hazardous waste: the case of Gulf of Guinea States”</strong>.  
-                  This PhD research examines, from a private law perspective, the civil and criminal liability regimes applicable  
-                  to illicit flows of hazardous waste, focusing on attribution, prevention and reparation challenges in national legal orders.  
-                </span>  
-              </p>  
-              <p>  
-                <span class="lang lang-fr">  
-                  Le Cabinet s’appuie sur ces résultats pour accompagner les acteurs exposés à des risques environnementaux complexes :  
-                  opérations portuaires, chaînes logistiques, industries, collectivités territoriales, ONG, bailleurs et investisseurs.  
-                </span>  
-                <span class="lang lang-en">  
-                  The Firm draws on these findings to assist actors exposed to complex environmental risks:  
-                  port operations, logistics chains, industry, local authorities, NGOs, lenders and investors.  
-                </span>  
-              </p>  
-              <p class="form-hint">  
-                <span class="lang lang-fr">  
-                  Sur demande, un résumé exécutif de la thèse et certaines présentations peuvent être communiqués dans le cadre de missions.  
-                </span>  
-                <span class="lang lang-en">  
-                  Upon request, an executive summary of the thesis and selected presentations can be shared in the context of engagements.  
-                </span>  
-              </p>  
-            </div>  
-  
-            <div class="box">  
-              <h3>  
-                <span class="lang lang-fr">Articles, chapitres, conférences</span>  
-                <span class="lang lang-en">Articles, chapters, conferences</span>  
-              </h3>  
-              <ul class="card-list" style="margin-top:6px;">  
-                <li>  
-                  <span class="lang lang-fr">  
-                    Travaux sur la responsabilité environnementale dans le Golfe de Guinée (pollutions marines, préjudice écologique,  
-                    contentieux transfrontières).  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Work on environmental liability in the Gulf of Guinea (marine pollution, environmental damage, cross-border disputes).  
-                  </span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">  
-                    Interventions sur la gouvernance des déchets dangereux, les Conventions de Bâle et de Bamako, et la responsabilité  
-                    des acteurs privés.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Talks on hazardous waste governance, the Basel and Bamako Conventions, and private actors’ liability.  
-                  </span>  
-                </li>  
-                <li>  
-                  <span class="lang lang-fr">  
-                    Participation à des forums, sommets et programmes internationaux consacrés à la démocratie, à la paix,  
-                    à l’État de droit et à l’engagement citoyen en Afrique.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Participation in forums, summits and international programmes on democracy, peace, rule of law and civic engagement in Africa.  
-                  </span>  
-                </li>  
-              </ul>  
-              <p style="margin-top:10px;">  
-                <span class="lang lang-fr">  
-                  Ces contributions nourrissent une veille permanente et une compréhension fine des débats contemporains,  
-                  dont bénéficient directement les clients du Cabinet.  
-                </span>  
-                <span class="lang lang-en">  
-                  These contributions support continuous monitoring and a fine understanding of contemporary debates,  
-                  from which the Firm’s clients directly benefit.  
-                </span>  
-              </p>  
-            </div>  
-          </div>  
-        </section>  
-  
-        <!-- CONTACT -->  
-        <section id="contact">  
-          <div class="section-header">  
-            <div>  
-              <div class="section-kicker">  
-                <span class="lang lang-fr">Contact</span>  
-                <span class="lang lang-en">Contact</span>  
-              </div>  
-              <h2 class="section-title">  
-                <span class="lang lang-fr">Entrer en relation avec le Cabinet</span>  
-                <span class="lang lang-en">Get in touch with the Firm</span>  
-              </h2>  
-            </div>  
-            <p class="section-subtitle">  
-              <span class="lang lang-fr">  
-                Pour toute demande de rendez-vous, de mission de conseil ou de collaboration, vous pouvez utiliser le formulaire  
-                ci-dessous ou les coordonnées directes du Cabinet.  
-              </span>  
-              <span class="lang lang-en">  
-                For any request regarding meetings, advisory engagements or collaborations, feel free to use the form below  
-                or the Firm’s direct contact details.  
-              </span>  
-            </p>  
-          </div>  
-  
-          <div class="contact-grid">  
-            <div class="box">  
-              <h3>  
-                <span class="lang lang-fr">Coordonnées du Cabinet</span>  
-                <span class="lang lang-en">Firm contact details</span>  
-              </h3>  
-              <div class="contact-info-item">  
-                <div class="contact-icon">✉</div>  
-                <div>  
-                  <strong>  
-                    <span class="lang lang-fr">Email</span>  
-                    <span class="lang lang-en">Email</span>  
-                  </strong><br>  
-                  <a href="mailto:achillecomoe@yahoo.fr">achillecomoe@yahoo.fr</a>  
-                </div>  
-              </div>  
-              <div class="contact-info-item">  
-                <div class="contact-icon">☎</div>  
-                <div>  
-                  <strong>  
-                    <span class="lang lang-fr">Téléphone / WhatsApp</span>  
-                    <span class="lang lang-en">Phone / WhatsApp</span>  
-                  </strong><br>  
-                  <a href="tel:+2250748138304">+225 07 48 13 83 04</a>  
-                </div>  
-              </div>  
-              <div class="contact-info-item">  
-                <div class="contact-icon">⌂</div>  
-                <div>  
-                  <strong>  
-                    <span class="lang lang-fr">Adresse</span>  
-                    <span class="lang lang-en">Address</span>  
-                  </strong><br>  
-                  <span class="lang lang-fr">  
-                    Cocody – Riviera 2 – Anono<br>  
-                    Abidjan, Côte d’Ivoire  
-                  </span>  
-                  <span class="lang lang-en">  
-                    Cocody – Riviera 2 – Anono<br>  
-                    Abidjan, Côte d’Ivoire  
-                  </span>  
-                </div>  
-              </div>  
-              <p class="form-hint" style="margin-top:10px;">  
-                <span class="lang lang-fr">  
-                  Des entretiens peuvent être organisés en présentiel ou à distance (visioconférence), en français ou en anglais.  
-                </span>  
-                <span class="lang lang-en">  
-                  Meetings can be held in person or remotely (videoconference), in French or English.  
-                </span>  
-              </p>  
-            </div>  
-  
-            <div class="box">  
-              <h3>  
-                <span class="lang lang-fr">Formulaire de contact</span>  
-                <span class="lang lang-en">Contact form</span>  
-              </h3>  
-              <!-- FormSubmit : envoi professionnel sans serveur -->  
-              <form action="https://formsubmit.co/achillecomoe@yahoo.fr" method="POST">  
-                <input type="hidden" name="_subject" value="Nouveau message depuis le site LE PHŒNIX — ACHILLE COMOE">  
-                <input type="hidden" name="_next" value="https://achcomdapprompronou-boop.github.io/lephoenixachillecomoe/">  
-                <input type="hidden" name="_captcha" value="false">  
-  
-                <div class="form-row">  
-                  <div>  
-                    <label for="nom">  
-                      <span class="lang lang-fr">Nom complet</span>  
-                      <span class="lang lang-en">Full name</span>  
-                    </label>  
-                    <input type="text" id="nom" name="Nom / Name" required>  
-                  </div>  
-                  <div>  
-                    <label for="structure">  
-                      <span class="lang lang-fr">Organisation</span>  
-                      <span class="lang lang-en">Organisation</span>  
-                    </label>  
-                    <input type="text" id="structure" name="Organisation">  
-                  </div>  
-                </div>  
-                <div class="form-row">  
-                  <div>  
-                    <label for="email">  
-                      <span class="lang lang-fr">Email</span>  
-                      <span class="lang lang-en">Email</span>  
-                    </label>  
-                    <input type="email" id="email" name="Email" required>  
-                  </div>  
-                  <div>  
-                    <label for="telephone">  
-                      <span class="lang lang-fr">Téléphone</span>  
-                      <span class="lang lang-en">Phone</span>  
-                    </label>  
-                    <input type="tel" id="telephone" name="Téléphone / Phone">  
-                  </div>  
-                </div>  
-                <div>  
-                  <label for="objet">  
-                    <span class="lang lang-fr">Objet de la demande</span>  
-                    <span class="lang lang-en">Subject of your request</span>  
-                  </label>  
-                  <input type="text" id="objet" name="Objet / Subject" placeholder="Ex. : Conseil en responsabilité environnementale / Environmental liability advisory" required>  
-                </div>  
-                <div>  
-                  <label for="message">  
-                    <span class="lang lang-fr">Message</span>  
-                    <span class="lang lang-en">Message</span>  
-                  </label>  
-                  <textarea id="message" name="Message" required></textarea>  
-                </div>  
-                <p class="form-hint">  
-                  <span class="lang lang-fr">  
-                    En envoyant ce message, vous acceptez que vos informations soient utilisées uniquement pour traiter votre demande.  
-                  </span>  
-                  <span class="lang lang-en">  
-                    By sending this message, you agree that your data will be used solely to process your request.  
-                  </span>  
-                </p>  
-                <button type="submit" class="btn-primary btn-submit">  
-                  <span class="lang lang-fr">Envoyer la demande</span>  
-                  <span class="lang lang-en">Send request</span>  
-                </button>  
-              </form>  
-            </div>  
-          </div>  
-        </section>  
-      </main>  
-  
-      <footer>  
-        <div class="footer-top">  
-          <div class="footer-domain">www.lephoenixachillecomoe.com</div>  
-          <div>  
-            <span class="lang lang-fr">LE PHŒNIX — ACHILLE COMOE · Cabinet de conseil juridique & stratégique · Site Web officiel</span>  
-            <span class="lang lang-en">LE PHŒNIX — ACHILLE COMOE · Strategic legal advisory · Official website</span>  
-          </div>  
-        </div>  
-        <div class="footer-bottom">  
-          <div>  
-            © <span id="year"></span>  
-            <span class="lang lang-fr">Tous droits réservés.</span>  
-            <span class="lang lang-en">All rights reserved.</span>  
-          </div>  
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">  
-            <a href="#top">  
-              <span class="lang lang-fr">Haut de page</span>  
-              <span class="lang lang-en">Back to top</span>  
-            </a>  
-            <span style="opacity:0.5;">|</span>  
-            <span>FR / EN advisory</span>  
-          </div>  
-        </div>  
-      </footer>  
-    </div>  
-  </div>  
-  
-  <script>  
-    // Année automatique dans le footer  
-    document.getElementById("year").textContent = new Date().getFullYear();  
-  
-    // Menu mobile  
-    const navToggle = document.getElementById("navToggle");  
-    const navLinks = document.getElementById("navLinks");  
-  
-    navToggle.addEventListener("click", () => {  
-      navLinks.classList.toggle("open");  
-    });  
-  
-    // Basculeur de langue  
-    const langButtons = document.querySelectorAll(".lang-btn");  
-    const langElements = document.querySelectorAll(".lang");  
-  
-    function setLanguage(lang) {  
-      langButtons.forEach(btn => {  
-        btn.classList.toggle("lang-active", btn.dataset.lang === lang);  
-      });  
-      langElements.forEach(el => {  
-        if (el.classList.contains("lang-" + lang)) {  
-          el.style.display = "";  
-        } else {  
-          el.style.display = "none";  
-        }  
-      });  
-      document.documentElement.lang = lang === "en" ? "en" : "fr";  
-    }  
-  
-    langButtons.forEach(btn => {  
-      btn.addEventListener("click", () => {  
-        setLanguage(btn.dataset.lang);  
-      });  
-    });  
-  
-    // Langue par défaut : FR  
-    setLanguage("fr");  
-  </script>  
-</body>  
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Web officiel du Cabinet LE PHŒNIX — ACHILLE COMOE Legal Advisory</title>
+  <meta name="description" content="Cabinet LE PHŒNIX — ACHILLE COMOE : expertise juridique de haut niveau, conseil stratégique, gouvernance et gestion des risques. Accompagnement des entreprises, institutions et acteurs privés en responsabilité, conformité réglementaire, droit de l’environnement et droit international privé économique.">
+  <meta name="author" content="Cabinet LE PHŒNIX — ACHILLE COMOE Legal Advisory">
+  <link rel="icon" type="image/png" href="favicon-phoenix.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1f3259;
+      --primary-light: #314674;
+      --accent: #c99a2b;
+      --accent-soft: rgba(201, 154, 43, 0.12);
+      --bg: #f5f7fb;
+      --bg-soft: #eef2ff;
+      --surface: #ffffff;
+      --surface-soft: #f3f5ff;
+      --text: #1e2233;
+      --muted: #6d7390;
+      --white: #ffffff;
+      --border: #dde1ee;
+      --radius-lg: 24px;
+      --radius-md: 14px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 18px 45px rgba(23, 38, 80, 0.12);
+      --shadow-light: 0 8px 24px rgba(23, 38, 80, 0.08);
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f7f8fc 0%, #eef2ff 45%, #e6ecff 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: var(--text);
+    }
+
+    .page-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 18px 48px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(247, 248, 252, 0.98), rgba(247, 248, 252, 0.94), rgba(247, 248, 252, 0.9));
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 18px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* LOGO INTÉGRÉ */
+
+    .logo-mark {
+      height: 44px;
+      border-radius: 10px;
+      background: #040915;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-light);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo-mark::before {
+      display: none;
+    }
+
+    .logo-mark img {
+      height: 100%;
+      width: auto;
+    }
+
+    .logo-phoenix {
+      display: none; /* plus utilisé mais laissé pour compatibilité */
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo-title {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .logo-subtitle {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      position: relative;
+    }
+
+    .nav-links a {
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: #3b4260;
+    }
+
+    .nav-links a:hover {
+      background: rgba(21, 40, 74, 0.06);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(201, 154, 43, 0.7);
+      background: linear-gradient(135deg, #fff7df, #f2d37a, #e1b857);
+      box-shadow: 0 10px 24px rgba(201, 154, 43, 0.3);
+      font-size: 13px;
+      font-weight: 500;
+      color: #4a3711;
+    }
+
+    .nav-cta span:first-child {
+      font-size: 10px;
+      line-height: 1;
+      color: #c03a2b;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      font-size: 22px;
+    }
+
+    /* Lang toggle */
+
+    .lang-toggle {
+      display: inline-flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border);
+      margin-left: 4px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: #4b5374;
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .lang-btn.lang-active {
+      background: rgba(201, 154, 43, 0.15);
+      color: #3b2a08;
+      font-weight: 600;
+    }
+
+    .lang-en {
+      display: none;
+    }
+
+    /* Hero */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 34px;
+      margin-top: 32px;
+      align-items: center;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 11px 6px 6px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+      box-shadow: var(--shadow-light);
+    }
+
+    .hero-badge-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fdf4d5 0, #e1bf62 40%, #b1832e 70%, #5d3a12 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 16px rgba(201, 154, 43, 0.7);
+    }
+
+    .hero-badge-dot::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid #fff3cf;
+      background: #ffffff;
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 3vw + 10px, 36px);
+      line-height: 1.25;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 580px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .hero-chip {
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: #414867;
+      box-shadow: 0 3px 8px rgba(34, 54, 107, 0.06);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ffeac0, #f3cb6f, #e2af48);
+      color: #4b3713;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 35px rgba(201, 154, 43, 0.35);
+      filter: brightness(1.02);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.9);
+      color: #3d4668;
+      font-size: 13px;
+      font-weight: 500;
+      transition: var(--transition);
+      box-shadow: 0 4px 10px rgba(34, 54, 107, 0.06);
+    }
+
+    .btn-outline:hover {
+      background: var(--surface-soft);
+      transform: translateY(-1px);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hero-meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 10px;
+      color: #9aa2c2;
+    }
+
+    .hero-meta-value {
+      font-weight: 500;
+      color: #4a5174;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      padding: 20px 18px 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(201, 154, 43, 0.25), transparent 65%);
+      top: -40px;
+      right: -30px;
+      opacity: 1;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .hero-card-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #4b557c;
+    }
+
+    .hero-card-tag {
+      font-size: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(201, 154, 43, 0.6);
+      background: rgba(255, 245, 212, 0.9);
+      color: #5c4316;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 10px;
+    }
+
+    .hero-block {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      padding: 10px 11px;
+      font-size: 11px;
+      color: #4a5174;
+    }
+
+    .hero-block-title {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #8a92bb;
+      margin-bottom: 6px;
+    }
+
+    .hero-block-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hero-bullet {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #e3b858;
+    }
+
+    .hero-bullet span {
+      color: #404669;
+    }
+
+    .hero-score {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #c89a30;
+    }
+
+    .hero-score small {
+      font-size: 11px;
+      font-weight: 400;
+      color: #6d7390;
+    }
+
+    .hero-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed #d5d9ee;
+      font-size: 10px;
+      color: #6a7090;
+    }
+
+    .hero-footer strong {
+      color: #b38724;
+      font-weight: 500;
+    }
+
+    .hero-footer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f5f6ff;
+      border: 1px solid var(--border);
+      color: #4b5374;
+    }
+
+    /* Sections */
+
+    main {
+      margin-top: 36px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      color: #8a92bb;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 4px;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+      max-width: 460px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 14px 14px 16px;
+      box-shadow: var(--shadow-light);
+      font-size: 12px;
+      color: #4a5072;
+    }
+
+    .card-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #7a5b1a;
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .card-list {
+      margin: 10px 0 0;
+      padding-left: 16px;
+      color: var(--muted);
+    }
+
+    .card-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Two column section */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .box {
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 14px 14px 16px;
+      box-shadow: var(--shadow-light);
+      font-size: 12px;
+      color: #4a5072;
+    }
+
+    .box h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--primary);
+    }
+
+    .box p {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tagline {
+      font-size: 11px;
+      color: #8a92bb;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 4px;
+    }
+
+    .en-tagline {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+      font-style: italic;
+    }
+
+    .values-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .value-item {
+      padding: 8px 9px;
+      border-radius: 13px;
+      background: #f6f7ff;
+      border: 1px dashed #cfd4f0;
+      font-size: 11px;
+      color: #4a5072;
+    }
+
+    .value-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #b1832e;
+      font-weight: 500;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .contact-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: #e6ebff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: #b1832e;
+      box-shadow: 0 3px 8px rgba(34, 54, 107, 0.08);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    label {
+      font-size: 11px;
+      color: #4b5374;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(180, 188, 224, 0.9);
+      background: #ffffff;
+      color: var(--text);
+      padding: 8px 10px;
+      font-size: 12px;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+      resize: vertical;
+      min-height: 38px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #a0a7c4;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(201, 154, 43, 0.4);
+      background: #fffdf6;
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .form-hint {
+      font-size: 11px;
+      color: #8d93b7;
+      margin-top: 4px;
+    }
+
+    .btn-submit {
+      margin-top: 4px;
+      align-self: flex-start;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 22px;
+      padding-top: 14px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .footer-domain {
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom a {
+      color: #5e6584;
+      font-size: 11px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .two-col,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links.open {
+        position: absolute;
+        inset: 52px 16px auto 16px;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .page-inner {
+        padding-inline: 16px;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <a href="#top" class="logo">
+          <div class="logo-mark">
+            <!-- Remplace le texte "PH" par le logo officiel -->
+            <img src="logo-le-phoenix-achille-comoe.png" alt="Logo LE PHŒNIX — ACHILLE COMOE Legal Advisory">
+          </div>
+          <div class="logo-text">
+            <div class="logo-title">LE PHŒNIX — ACHILLE COMOE</div>
+            <div class="logo-subtitle">Legal Advisory</div>
+          </div>
+        </a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">
+          <span>☰</span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#expertises">
+            <span class="lang lang-fr">Expertises</span>
+            <span class="lang lang-en">Expertise</span>
+          </a>
+          <a href="#approche">
+            <span class="lang lang-fr">Approche</span>
+            <span class="lang lang-en">Approach</span>
+          </a>
+          <a href="#fondateur">
+            <span class="lang lang-fr">Fondateur</span>
+            <span class="lang lang-en">Founder</span>
+          </a>
+          <a href="#publications">
+            <span class="lang lang-fr">Publications</span>
+            <span class="lang lang-en">Publications</span>
+          </a>
+          <a href="#contact">
+            <span class="lang lang-fr">Contact</span>
+            <span class="lang lang-en">Contact</span>
+          </a>
+          <a href="#contact" class="nav-cta">
+            <span>●</span>
+            <span class="lang lang-fr">Consultation stratégique</span>
+            <span class="lang lang-en">Strategic consultation</span>
+          </a>
+          <div class="lang-toggle">
+            <button class="lang-btn lang-active" data-lang="fr">FR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page-inner" id="top">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            <span class="lang lang-fr">Cabinet de conseil juridique & stratégique</span>
+            <span class="lang lang-en">Strategic legal advisory boutique</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="lang lang-fr">
+              Anticiper le risque, sécuriser la décision, protéger la responsabilité.
+              <br><span>LE PHŒNIX — ACHILLE COMOE</span>
+            </span>
+            <span class="lang lang-en">
+              Anticipate risk, secure decisions, protect liability.
+              <br><span>LE PHŒNIX — ACHILLE COMOE</span>
+            </span>
+          </h1>
+          <p class="hero-subtitle">
+            <span class="lang lang-fr">
+              Cabinet indépendant basé en Côte d’Ivoire, dédié à la responsabilité civile et pénale, à la conformité réglementaire,
+              au droit de l’environnement et à la gestion stratégique des risques au service des entreprises, des institutions
+              et des acteurs privés en Afrique et au-delà.
+            </span>
+            <span class="lang lang-en">
+              Independent advisory practice based in Côte d’Ivoire, dedicated to civil and criminal liability, regulatory compliance,
+              environmental law and strategic risk management for companies, institutions and private actors in Africa and beyond.
+            </span>
+          </p>
+          <div class="hero-highlights">
+            <div class="hero-chip">
+              <span class="lang lang-fr">Responsabilité civile & pénale</span>
+              <span class="lang lang-en">Civil & criminal liability</span>
+            </div>
+            <div class="hero-chip">
+              <span class="lang lang-fr">Droit de l’environnement & ESG</span>
+              <span class="lang lang-en">Environmental law & ESG</span>
+            </div>
+            <div class="hero-chip">
+              <span class="lang lang-fr">Gouvernance & conformité</span>
+              <span class="lang lang-en">Governance & compliance</span>
+            </div>
+            <div class="hero-chip">
+              <span class="lang lang-fr">Contrats & gestion des risques</span>
+              <span class="lang lang-en">Contracts & risk allocation</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">
+              <span class="lang lang-fr">Prendre contact</span>
+              <span class="lang lang-en">Get in touch</span>
+              <span>→</span>
+            </a>
+            <a href="#expertises" class="btn-outline">
+              <span class="lang lang-fr">Découvrir nos expertises</span>
+              <span class="lang lang-en">Discover our expertise</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <div class="hero-meta-label">
+                <span class="lang lang-fr">Positionnement</span>
+                <span class="lang lang-en">Positioning</span>
+              </div>
+              <div class="hero-meta-value">
+                <span class="lang lang-fr">Responsabilité, conformité, environnement</span>
+                <span class="lang lang-en">Liability, compliance, environment</span>
+              </div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-label">
+                <span class="lang lang-fr">Clientèle</span>
+                <span class="lang lang-en">Clients</span>
+              </div>
+              <div class="hero-meta-value">
+                <span class="lang lang-fr">Entreprises, institutions, ONG, investisseurs</span>
+                <span class="lang lang-en">Corporates, institutions, NGOs, investors</span>
+              </div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-label">
+                <span class="lang lang-fr">Zone d’intervention</span>
+                <span class="lang lang-en">Geographical focus</span>
+              </div>
+              <div class="hero-meta-value">
+                <span class="lang lang-fr">Afrique de l’Ouest & espaces transnationaux</span>
+                <span class="lang lang-en">West Africa & cross-border projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <div>
+                <div class="hero-card-title">
+                  <span class="lang lang-fr">Tableau de bord du Cabinet</span>
+                  <span class="lang lang-en">Firm overview</span>
+                </div>
+                <div style="font-size:11px;color:#6d7390;margin-top:4px;">
+                  <span class="lang lang-fr">
+                    Une expertise au croisement du droit privé, de la gouvernance, du contentieux complexe et du risque environnemental.
+                  </span>
+                  <span class="lang lang-en">
+                    An expertise at the crossroads of private law, governance, complex disputes and environmental risk.
+                  </span>
+                </div>
+              </div>
+              <div class="hero-card-tag">
+                <span class="lang lang-fr">Focus risques & responsabilité</span>
+                <span class="lang lang-en">Risk & liability focus</span>
+              </div>
+            </div>
+
+            <div class="hero-grid">
+              <div class="hero-block">
+                <div class="hero-block-title">
+                  <span class="lang lang-fr">Domaines clés</span>
+                  <span class="lang lang-en">Key areas</span>
+                </div>
+                <div class="hero-block-list">
+                  <div class="hero-bullet">
+                    <div class="hero-dot"></div>
+                    <span class="lang lang-fr">Responsabilité civile & pénale environnementale</span>
+                    <span class="lang lang-en">Civil & criminal environmental liability</span>
+                  </div>
+                  <div class="hero-bullet">
+                    <div class="hero-dot"></div>
+                    <span class="lang lang-fr">Conformité réglementaire & gouvernance</span>
+                    <span class="lang lang-en">Regulatory compliance & governance</span>
+                  </div>
+                  <div class="hero-bullet">
+                    <div class="hero-dot"></div>
+                    <span class="lang lang-fr">Contrats, clauses de risque & arbitrage</span>
+                    <span class="lang lang-en">Contracts, risk clauses & arbitration</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-block">
+                <div class="hero-block-title">
+                  <span class="lang lang-fr">Approche</span>
+                  <span class="lang lang-en">Approach</span>
+                </div>
+                <p style="margin:0 0 6px;color:#4b5374;">
+                  <span class="lang lang-fr">
+                    Analyse juridique, stratégie de prévention et accompagnement opérationnel des décideurs.
+                  </span>
+                  <span class="lang lang-en">
+                    Legal analysis, preventive strategy and operational support for decision-makers.
+                  </span>
+                </p>
+                <div class="hero-score">
+                  360°
+                  <small>
+                    <span class="lang lang-fr">Vision intégrée du risque</span>
+                    <span class="lang lang-en">Integrated risk perspective</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-footer">
+              <div>
+                <strong>
+                  <span class="lang lang-fr">Dépassement du litige</span>
+                  <span class="lang lang-en">Beyond litigation</span>
+                </strong>
+                <span class="lang lang-fr"> : le droit comme outil de prévention, de décision et d’influence.</span>
+                <span class="lang lang-en">: law as a tool for prevention, decision-making and influence.</span>
+              </div>
+              <div class="hero-footer-pill">
+                <span>FR / EN</span>
+                <span style="opacity:0.7;">Advisory • Training • Advocacy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main>
+        <!-- EXPERTISES -->
+        <section id="expertises">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span class="lang lang-fr">Expertises</span>
+                <span class="lang lang-en">Expertise</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang lang-fr">Responsabilité, risque, gouvernance</span>
+                <span class="lang lang-en">Liability, risk, governance</span>
+              </h2>
+            </div>
+            <p class="section-subtitle">
+              <span class="lang lang-fr">
+                Le Cabinet intervient en conseil, en appui stratégique et en accompagnement opérationnel sur l’ensemble de la chaîne
+                du risque : anticiper, structurer, sécuriser, défendre.
+              </span>
+              <span class="lang lang-en">
+                The Firm provides advisory, strategic support and operational assistance across the entire risk chain:
+                anticipate, structure, secure, defend.
+              </span>
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <div class="card-pill">
+                <span class="lang lang-fr">Responsabilité & contentieux</span>
+                <span class="lang lang-en">Liability & disputes</span>
+              </div>
+              <h3 class="card-title">
+                <span class="lang lang-fr">Responsabilité civile et pénale</span>
+                <span class="lang lang-en">Civil and criminal liability</span>
+              </h3>
+              <p>
+                <span class="lang lang-fr">
+                  Accompagnement sur les fondements et la mise en œuvre de la responsabilité civile et pénale, notamment en matière
+                  d’atteintes environnementales, de risques industriels et de dommages complexes (pollutions, catastrophes, préjudice écologique).
+                </span>
+                <span class="lang lang-en">
+                  Support on the grounds and implementation of civil and criminal liability, particularly for environmental damage,
+                  industrial risks and complex harms (pollution, disasters, environmental damage).
+                </span>
+              </p>
+              <ul class="card-list">
+                <li>
+                  <span class="lang lang-fr">Analyse des fondements de responsabilité et des voies d’action</span>
+                  <span class="lang lang-en">Analysis of liability grounds and legal avenues</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Stratégies de prévention du contentieux et de gestion de crise</span>
+                  <span class="lang lang-en">Litigation-prevention strategies and crisis management</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Appui aux équipes internes et aux avocats plaidants</span>
+                  <span class="lang lang-en">Support to in-house teams and trial lawyers</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-pill">
+                <span class="lang lang-fr">Conformité & environnement</span>
+                <span class="lang lang-en">Compliance & environment</span>
+              </div>
+              <h3 class="card-title">
+                <span class="lang lang-fr">Conformité réglementaire & ESG</span>
+                <span class="lang lang-en">Regulatory compliance & ESG</span>
+              </h3>
+              <p>
+                <span class="lang lang-fr">
+                  Mise en cohérence des pratiques avec les exigences légales, réglementaires et conventionnelles,
+                  en particulier en droit de l’environnement, en gouvernance durable et en critères ESG, avec une attention
+                  particulière aux mouvements transfrontières illicites de déchets dangereux.
+                </span>
+                <span class="lang lang-en">
+                  Aligning practices with legal, regulatory and treaty-based requirements, especially in environmental law,
+                  sustainable governance and ESG criteria, with a specific focus on illicit transboundary movements of hazardous waste.
+                </span>
+              </p>
+              <ul class="card-list">
+                <li>
+                  <span class="lang lang-fr">Cartographie des obligations, des risques et des zones de vulnérabilité</span>
+                  <span class="lang lang-en">Mapping of obligations, risks and vulnerability areas</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Politiques internes, procédures, codes de conduite et chartes éthiques</span>
+                  <span class="lang lang-en">Internal policies, procedures, codes of conduct and ethics charters</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Veille juridique ciblée et sensibilisation des équipes</span>
+                  <span class="lang lang-en">Targeted legal monitoring and staff awareness-raising</span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-pill">
+                <span class="lang lang-fr">Contrats & opérations</span>
+                <span class="lang lang-en">Contracts & transactions</span>
+              </div>
+              <h3 class="card-title">
+                <span class="lang lang-fr">Contrats, clauses de risque & arbitrage</span>
+                <span class="lang lang-en">Contracts, risk clauses & arbitration</span>
+              </h3>
+              <p>
+                <span class="lang lang-fr">
+                  Intégration des enjeux de responsabilité, de risque et de règlement des différends dans les contrats
+                  commerciaux, de partenariat, d’investissement ou de projet, y compris les opérations à dimension environnementale.
+                </span>
+                <span class="lang lang-en">
+                  Integrating liability, risk and dispute resolution issues into commercial, partnership, investment
+                  and project contracts, including environmentally sensitive operations.
+                </span>
+              </p>
+              <ul class="card-list">
+                <li>
+                  <span class="lang lang-fr">Clauses de responsabilité, garanties et limitations de réparation</span>
+                  <span class="lang lang-en">Liability clauses, guarantees and limitations</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Clauses environnementales, de conformité et de due diligence</span>
+                  <span class="lang lang-en">Environmental, compliance and due diligence clauses</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Clauses compromissoires et mécanismes d’arbitrage ou de médiation</span>
+                  <span class="lang lang-en">Arbitration clauses and ADR mechanisms</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- APPROCHE & VALEURS -->
+        <section id="approche">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span class="lang lang-fr">Approche</span>
+                <span class="lang lang-en">Approach</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang lang-fr">Une vision stratégique du droit</span>
+                <span class="lang lang-en">A strategic vision of law</span>
+              </h2>
+            </div>
+            <p class="section-subtitle">
+              <span class="lang lang-fr">
+                Le Cabinet conçoit le droit comme un levier de protection, de crédibilité et de performance pour les décideurs.
+              </span>
+              <span class="lang lang-en">
+                The Firm treats law as a lever for protection, credibility and performance for decision-makers.
+              </span>
+            </p>
+          </div>
+
+          <div class="two-col">
+            <div class="box">
+              <div class="tagline">
+                <span class="lang lang-fr">Positionnement</span>
+                <span class="lang lang-en">Positioning</span>
+              </div>
+              <h3>
+                <span class="lang lang-fr">Un cabinet tourné vers la décision stratégique</span>
+                <span class="lang lang-en">A firm focused on strategic decision-making</span>
+              </h3>
+              <p>
+                <span class="lang lang-fr">
+                  Le raisonnement ici présenté soutient que la valeur ajoutée du conseil juridique réside dans sa capacité
+                  à éclairer la décision, à anticiper l’aléa et à documenter la responsabilité. Le Cabinet intervient ainsi
+                  en amont des projets sensibles, des opérations exposées ou des situations de crise afin de structurer des
+                  choix juridiquement solides et défendables.
+                </span>
+                <span class="lang lang-en">
+                  The reasoning developed here is that legal advisory truly adds value when it clarifies decisions,
+                  anticipates risks and documents liability. The Firm therefore intervenes upstream in sensitive projects,
+                  high-exposure operations or crisis situations to structure legally sound and defensible choices.
+                </span>
+              </p>
+              <p>
+                <span class="lang lang-fr">
+                  Cette approche s’adresse en priorité aux entreprises, institutions, ONG et acteurs engagés dans des secteurs
+                  à forte intensité de risque (environnement, énergie, infrastructures, projets transnationaux, investissements),
+                  où la responsabilité ne se limite plus à la réparation, mais devient un enjeu de gouvernance, de réputation
+                  et de durabilité.
+                </span>
+                <span class="lang lang-en">
+                  This approach primarily targets companies, institutions, NGOs and actors involved in high-risk sectors
+                  (environment, energy, infrastructure, cross-border projects, investments), where liability is no longer
+                  limited to compensation but becomes a governance, reputation and sustainability issue.
+                </span>
+              </p>
+              <p class="en-tagline">
+                <span class="lang lang-fr">
+                  Le droit n’est pas seulement une contrainte – c’est un instrument stratégique de protection de la valeur,
+                  de la réputation et de l’impact à long terme.
+                </span>
+                <span class="lang lang-en">
+                  Law is not only a constraint – it is a strategic tool to protect value, reputation and long-term impact.
+                </span>
+              </p>
+            </div>
+
+            <div class="box">
+              <div class="tagline">
+                <span class="lang lang-fr">Valeurs</span>
+                <span class="lang lang-en">Values</span>
+              </div>
+              <h3>
+                <span class="lang lang-fr">Exigence, intégrité, pédagogie</span>
+                <span class="lang lang-en">Rigour, integrity, clarity</span>
+              </h3>
+              <div class="values-list">
+                <div class="value-item">
+                  <strong>
+                    <span class="lang lang-fr">Exigence juridique</span>
+                    <span class="lang lang-en">Legal rigour</span>
+                  </strong>
+                  <span class="lang lang-fr">
+                    Analyses fondées sur la rigueur du droit positif, l’argumentation doctrinale et la jurisprudence pertinente.
+                  </span>
+                  <span class="lang lang-en">
+                    Analyses grounded in positive law, doctrine and relevant case law.
+                  </span>
+                </div>
+                <div class="value-item">
+                  <strong>
+                    <span class="lang lang-fr">Indépendance & éthique</span>
+                    <span class="lang lang-en">Independence & ethics</span>
+                  </strong>
+                  <span class="lang lang-fr">
+                    Conseil loyal, protection de la confiance du client et vigilance face aux conflits d’intérêts.
+                  </span>
+                  <span class="lang lang-en">
+                    Loyal advice, protection of client trust and vigilance regarding conflicts of interest.
+                  </span>
+                </div>
+                <div class="value-item">
+                  <strong>
+                    <span class="lang lang-fr">Clarté & pédagogie</span>
+                    <span class="lang lang-en">Clarity & pedagogy</span>
+                  </strong>
+                  <span class="lang lang-fr">
+                    Restitution compréhensible pour le décideur : notes, schémas, scénarios de risque et options possibles.
+                  </span>
+                  <span class="lang lang-en">
+                    Clear deliverables for decision-makers: memos, visuals, risk scenarios and options.
+                  </span>
+                </div>
+                <div class="value-item">
+                  <strong>
+                    <span class="lang lang-fr">Vision long terme</span>
+                    <span class="lang lang-en">Long-term view</span>
+                  </strong>
+                  <span class="lang lang-fr">
+                    Intégration des enjeux de durabilité, d’impact social et d’acceptabilité environnementale des projets.
+                  </span>
+                  <span class="lang lang-en">
+                    Integration of sustainability, social impact and environmental acceptability considerations.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FONDATEUR -->
+        <section id="fondateur">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span class="lang lang-fr">Fondateur</span>
+                <span class="lang lang-en">Founder</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang lang-fr">Le Phœnix, une signature</span>
+                <span class="lang lang-en">The Phoenix, a signature</span>
+              </h2>
+            </div>
+            <p class="section-subtitle">
+              <span class="lang lang-fr">
+                Un profil à la croisée du droit privé, de la responsabilité environnementale et de l’engagement civique.
+              </span>
+              <span class="lang lang-en">
+                A profile at the intersection of private law, environmental liability and civic engagement.
+              </span>
+            </p>
+          </div>
+
+          <div class="two-col">
+            <div class="box">
+              <h3>
+                <span class="lang lang-fr">Achille COMOE — Fondateur du Cabinet</span>
+                <span class="lang lang-en">Achille COMOE — Founder</span>
+              </h3>
+              <p>
+                <span class="lang lang-fr">
+                  Il est soutenu ici que l’accompagnement des décideurs dans les dossiers sensibles exige une double culture :
+                  la maîtrise des mécanismes classiques de la responsabilité civile et pénale, et la compréhension fine des
+                  dynamiques économiques, politiques et sociales dans lesquelles s’inscrivent les projets.
+                </span>
+                <span class="lang lang-en">
+                  The view defended here is that supporting decision-makers in sensitive matters requires a double culture:
+                  mastery of classical civil and criminal liability mechanisms, and a nuanced understanding of the economic,
+                  political and social dynamics in which projects are embedded.
+                </span>
+              </p>
+              <p>
+                <span class="lang lang-fr">
+                  Docteur en droit privé, spécialisé en responsabilité pour mouvement transfrontière illicite de déchets dangereux
+                  dans les États du Golfe de Guinée, Achille COMOE développe une expertise approfondie en responsabilité
+                  environnementale, gouvernance des risques et contentieux complexes. Son expérience au sein de réseaux
+                  académiques, associatifs et internationaux nourrit une approche à la fois exigeante, engagée et tournée vers l’impact.
+                </span>
+                <span class="lang lang-en">
+                  Holding a PhD in Private Law with a thesis on liability for illicit transboundary movements of hazardous waste
+                  in Gulf of Guinea States, Achille COMOE has deep expertise in environmental liability, risk governance and
+                  complex disputes. His involvement in academic, civil society and international networks feeds an exacting,
+                  engaged and impact-oriented approach.
+                </span>
+              </p>
+              <p>
+                <span class="lang lang-fr">
+                  Le Cabinet LE PHŒNIX — ACHILLE COMOE assume ce positionnement : offrir un conseil juridique de haut niveau,
+                  capable d’articuler l’analyse technique, la stratégie de prévention et la dimension éthique des décisions.
+                </span>
+                <span class="lang lang-en">
+                  The Firm LE PHŒNIX — ACHILLE COMOE embraces this positioning: delivering high-level legal advice that combines
+                  technical analysis, preventive strategy and the ethical dimension of decision-making.
+                </span>
+              </p>
+            </div>
+
+            <div class="box">
+              <div class="tagline">
+                <span class="lang lang-fr">Quelques repères</span>
+                <span class="lang lang-en">Key milestones</span>
+              </div>
+              <ul class="card-list" style="margin-top:6px;">
+                <li>
+                  <span class="lang lang-fr">Doctorat en droit privé – responsabilité environnementale et mouvements transfrontières de déchets dangereux</span>
+                  <span class="lang lang-en">PhD in Private Law – environmental liability and transboundary movements of hazardous waste</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Expertise sur les Conventions de Bâle et de Bamako et leur réception en Afrique de l’Ouest</span>
+                  <span class="lang lang-en">Expertise on the Basel and Bamako Conventions and their implementation in West Africa</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Travaux sur la responsabilité civile et pénale environnementale dans le Golfe de Guinée</span>
+                  <span class="lang lang-en">Research on civil and criminal environmental liability in the Gulf of Guinea</span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">Engagement dans des initiatives de paix, de gouvernance et de jeunesse en Afrique</span>
+                  <span class="lang lang-en">Engagement in peace, governance and youth initiatives in Africa</span>
+                </li>
+              </ul>
+              <p style="margin-top:10px;">
+                <span class="lang lang-fr">
+                  Cette combinaison d’expertise académique et de terrain permet un conseil adapté aux enjeux locaux
+                  comme aux standards internationaux.
+                </span>
+                <span class="lang lang-en">
+                  This combination of academic and field expertise enables advice tailored both to local realities and
+                  international standards.
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PUBLICATIONS / THESE / CONFERENCES -->
+        <section id="publications">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span class="lang lang-fr">Publications & interventions</span>
+                <span class="lang lang-en">Publications & speaking</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang lang-fr">Thèse, travaux, conférences</span>
+                <span class="lang lang-en">Thesis, works, conferences</span>
+              </h2>
+            </div>
+            <p class="section-subtitle">
+              <span class="lang lang-fr">
+                La production scientifique et les interventions publiques du Cabinet nourrissent le conseil stratégique,
+                en particulier sur la responsabilité environnementale et les mouvements transfrontières de déchets dangereux.
+              </span>
+              <span class="lang lang-en">
+                The Firm’s academic work and public interventions feed into strategic advisory,
+                particularly on environmental liability and illicit transboundary movements of hazardous waste.
+              </span>
+            </p>
+          </div>
+
+          <div class="two-col">
+            <div class="box">
+              <h3>
+                <span class="lang lang-fr">Thèse de doctorat</span>
+                <span class="lang lang-en">Doctoral thesis</span>
+              </h3>
+              <p>
+                <span class="lang lang-fr">
+                  Titre : <strong>« La responsabilité pour mouvement transfrontière illicite de déchets dangereux : Cas des États du Golfe de Guinée »</strong>.
+                  Cette recherche analyse, en droit privé, les régimes de responsabilité civile et pénale applicables aux flux illicites
+                  de déchets dangereux, en examinant les difficultés d’imputation, de prévention et de réparation dans les ordres juridiques
+                  nationaux.
+                </span>
+                <span class="lang lang-en">
+                  Title: <strong>“Liability for illicit transboundary movement of hazardous waste: the case of Gulf of Guinea States”</strong>.
+                  This PhD research examines, from a private law perspective, the civil and criminal liability regimes applicable
+                  to illicit flows of hazardous waste, focusing on attribution, prevention and reparation challenges in national legal orders.
+                </span>
+              </p>
+              <p>
+                <span class="lang lang-fr">
+                  Le Cabinet s’appuie sur ces résultats pour accompagner les acteurs exposés à des risques environnementaux complexes :
+                  opérations portuaires, chaînes logistiques, industries, collectivités territoriales, ONG, bailleurs et investisseurs.
+                </span>
+                <span class="lang lang-en">
+                  The Firm draws on these findings to assist actors exposed to complex environmental risks:
+                  port operations, logistics chains, industry, local authorities, NGOs, lenders and investors.
+                </span>
+              </p>
+              <p class="form-hint">
+                <span class="lang lang-fr">
+                  Sur demande, un résumé exécutif de la thèse et certaines présentations peuvent être communiqués dans le cadre de missions.
+                </span>
+                <span class="lang lang-en">
+                  Upon request, an executive summary of the thesis and selected presentations can be shared in the context of engagements.
+                </span>
+              </p>
+            </div>
+
+            <div class="box">
+              <h3>
+                <span class="lang lang-fr">Articles, chapitres, conférences</span>
+                <span class="lang lang-en">Articles, chapters, conferences</span>
+              </h3>
+              <ul class="card-list" style="margin-top:6px;">
+                <li>
+                  <span class="lang lang-fr">
+                    Travaux sur la responsabilité environnementale dans le Golfe de Guinée (pollutions marines, préjudice écologique,
+                    contentieux transfrontières).
+                  </span>
+                  <span class="lang lang-en">
+                    Work on environmental liability in the Gulf of Guinea (marine pollution, environmental damage, cross-border disputes).
+                  </span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">
+                    Interventions sur la gouvernance des déchets dangereux, les Conventions de Bâle et de Bamako, et la responsabilité
+                    des acteurs privés.
+                  </span>
+                  <span class="lang lang-en">
+                    Talks on hazardous waste governance, the Basel and Bamako Conventions, and private actors’ liability.
+                  </span>
+                </li>
+                <li>
+                  <span class="lang lang-fr">
+                    Participation à des forums, sommets et programmes internationaux consacrés à la démocratie, à la paix,
+                    à l’État de droit et à l’engagement citoyen en Afrique.
+                  </span>
+                  <span class="lang lang-en">
+                    Participation in forums, summits and international programmes on democracy, peace, rule of law and civic engagement in Africa.
+                  </span>
+                </li>
+              </ul>
+              <p style="margin-top:10px;">
+                <span class="lang lang-fr">
+                  Ces contributions nourrissent une veille permanente et une compréhension fine des débats contemporains,
+                  dont bénéficient directement les clients du Cabinet.
+                </span>
+                <span class="lang lang-en">
+                  These contributions support continuous monitoring and a fine understanding of contemporary debates,
+                  from which the Firm’s clients directly benefit.
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span class="lang lang-fr">Contact</span>
+                <span class="lang lang-en">Contact</span>
+              </div>
+              <h2 class="section-title">
+                <span class="lang lang-fr">Entrer en relation avec le Cabinet</span>
+                <span class="lang lang-en">Get in touch with the Firm</span>
+              </h2>
+            </div>
+            <p class="section-subtitle">
+              <span class="lang lang-fr">
+                Pour toute demande de rendez-vous, de mission de conseil ou de collaboration, vous pouvez utiliser le formulaire
+                ci-dessous ou les coordonnées directes du Cabinet.
+              </span>
+              <span class="lang lang-en">
+                For any request regarding meetings, advisory engagements or collaborations, feel free to use the form below
+                or the Firm’s direct contact details.
+              </span>
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="box">
+              <h3>
+                <span class="lang lang-fr">Coordonnées du Cabinet</span>
+                <span class="lang lang-en">Firm contact details</span>
+              </h3>
+              <div class="contact-info-item">
+                <div class="contact-icon">✉</div>
+                <div>
+                  <strong>
+                    <span class="lang lang-fr">Email</span>
+                    <span class="lang lang-en">Email</span>
+                  </strong><br>
+                  <a href="mailto:achillecomoe@yahoo.fr">achillecomoe@yahoo.fr</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon">☎</div>
+                <div>
+                  <strong>
+                    <span class="lang lang-fr">Téléphone / WhatsApp</span>
+                    <span class="lang lang-en">Phone / WhatsApp</span>
+                  </strong><br>
+                  <a href="tel:+2250748138304">+225 07 48 13 83 04</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon">⌂</div>
+                <div>
+                  <strong>
+                    <span class="lang lang-fr">Adresse</span>
+                    <span class="lang lang-en">Address</span>
+                  </strong><br>
+                  <span class="lang lang-fr">
+                    Cocody – Riviera 2 – Anono<br>
+                    Abidjan, Côte d’Ivoire
+                  </span>
+                  <span class="lang lang-en">
+                    Cocody – Riviera 2 – Anono<br>
+                    Abidjan, Côte d’Ivoire
+                  </span>
+                </div>
+              </div>
+              <p class="form-hint" style="margin-top:10px;">
+                <span class="lang lang-fr">
+                  Des entretiens peuvent être organisés en présentiel ou à distance (visioconférence), en français ou en anglais.
+                </span>
+                <span class="lang lang-en">
+                  Meetings can be held in person or remotely (videoconference), in French or English.
+                </span>
+              </p>
+            </div>
+
+            <div class="box">
+              <h3>
+                <span class="lang lang-fr">Formulaire de contact</span>
+                <span class="lang lang-en">Contact form</span>
+              </h3>
+              <!-- FormSubmit : envoi professionnel sans serveur -->
+              <form action="https://formsubmit.co/achillecomoe@yahoo.fr" method="POST">
+                <input type="hidden" name="_subject" value="Nouveau message depuis le site LE PHŒNIX — ACHILLE COMOE">
+                <input type="hidden" name="_next" value="https://achcomdapprompronou-boop.github.io/lephoenixachillecomoe/">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-row">
+                  <div>
+                    <label for="nom">
+                      <span class="lang lang-fr">Nom complet</span>
+                      <span class="lang lang-en">Full name</span>
+                    </label>
+                    <input type="text" id="nom" name="Nom / Name" required>
+                  </div>
+                  <div>
+                    <label for="structure">
+                      <span class="lang lang-fr">Organisation</span>
+                      <span class="lang lang-en">Organisation</span>
+                    </label>
+                    <input type="text" id="structure" name="Organisation">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div>
+                    <label for="email">
+                      <span class="lang lang-fr">Email</span>
+                      <span class="lang lang-en">Email</span>
+                    </label>
+                    <input type="email" id="email" name="Email" required>
+                  </div>
+                  <div>
+                    <label for="telephone">
+                      <span class="lang lang-fr">Téléphone</span>
+                      <span class="lang lang-en">Phone</span>
+                    </label>
+                    <input type="tel" id="telephone" name="Téléphone / Phone">
+                  </div>
+                </div>
+                <div>
+                  <label for="objet">
+                    <span class="lang lang-fr">Objet de la demande</span>
+                    <span class="lang lang-en">Subject of your request</span>
+                  </label>
+                  <input type="text" id="objet" name="Objet / Subject" placeholder="Ex. : Conseil en responsabilité environnementale / Environmental liability advisory" required>
+                </div>
+                <div>
+                  <label for="message">
+                    <span class="lang lang-fr">Message</span>
+                    <span class="lang lang-en">Message</span>
+                  </label>
+                  <textarea id="message" name="Message" required></textarea>
+                </div>
+                <p class="form-hint">
+                  <span class="lang lang-fr">
+                    En envoyant ce message, vous acceptez que vos informations soient utilisées uniquement pour traiter votre demande.
+                  </span>
+                  <span class="lang lang-en">
+                    By sending this message, you agree that your data will be used solely to process your request.
+                  </span>
+                </p>
+                <button type="submit" class="btn-primary btn-submit">
+                  <span class="lang lang-fr">Envoyer la demande</span>
+                  <span class="lang lang-en">Send request</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-top">
+          <div class="footer-domain">www.lephoenixachillecomoe.com</div>
+          <div>
+            <span class="lang lang-fr">LE PHŒNIX — ACHILLE COMOE · Cabinet de conseil juridique & stratégique · Site Web officiel</span>
+            <span class="lang lang-en">LE PHŒNIX — ACHILLE COMOE · Strategic legal advisory · Official website</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>
+            © <span id="year"></span>
+            <span class="lang lang-fr">Tous droits réservés.</span>
+            <span class="lang lang-en">All rights reserved.</span>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="#top">
+              <span class="lang lang-fr">Haut de page</span>
+              <span class="lang lang-en">Back to top</span>
+            </a>
+            <span style="opacity:0.5;">|</span>
+            <span>FR / EN advisory</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Année automatique dans le footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    // Basculeur de langue
+    const langButtons = document.querySelectorAll(".lang-btn");
+    const langElements = document.querySelectorAll(".lang");
+
+    function setLanguage(lang) {
+      langButtons.forEach(btn => {
+        btn.classList.toggle("lang-active", btn.dataset.lang === lang);
+      });
+      langElements.forEach(el => {
+        if (el.classList.contains("lang-" + lang)) {
+          el.style.display = "";
+        } else {
+          el.style.display = "none";
+        }
+      });
+      document.documentElement.lang = lang === "en" ? "en" : "fr";
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        setLanguage(btn.dataset.lang);
+      });
+    });
+
+    // Langue par défaut : FR
+    setLanguage("fr");
+  </script>
+</body>
 </html>
 ```0
