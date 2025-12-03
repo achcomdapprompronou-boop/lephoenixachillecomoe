@@ -94,32 +94,29 @@
       gap: 10px;
     }
 
-    /* LOGO INTÉGRÉ */
-
+    /* NOUVEL AFFICHAGE DU LOGO IMAGE */
     .logo-mark {
-      height: 44px;
-      border-radius: 10px;
-      background: #040915;
-      padding: 4px 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: var(--shadow-light);
-      overflow: hidden;
+      width: 120px;      /* largeur du logo dans la barre */
+      height: auto;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
       position: relative;
+      overflow: visible;
+      padding: 0;
     }
 
     .logo-mark::before {
-      display: none;
+      content: none;
     }
 
-    .logo-mark img {
-      height: 100%;
-      width: auto;
-    }
-
-    .logo-phoenix {
-      display: none; /* plus utilisé mais laissé pour compatibilité */
+    .logo-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
 
     .logo-text {
@@ -727,8 +724,7 @@
       color: #4b5374;
     }
 
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
       border-radius: 10px;
       border: 1px solid rgba(180, 188, 224, 0.9);
@@ -743,13 +739,11 @@
       min-height: 38px;
     }
 
-    input::placeholder,
-    textarea::placeholder {
+    input::placeholder, textarea::placeholder {
       color: #a0a7c4;
     }
 
-    input:focus,
-    textarea:focus {
+    input:focus, textarea:focus {
       border-color: var(--accent);
       box-shadow: 0 0 0 1px rgba(201, 154, 43, 0.4);
       background: #fffdf6;
@@ -873,8 +867,8 @@
       <nav class="nav">
         <a href="#top" class="logo">
           <div class="logo-mark">
-            <!-- Remplace le texte "PH" par le logo officiel -->
-            <img src="logo-le-phoenix-achille-comoe.png" alt="Logo LE PHŒNIX — ACHILLE COMOE Legal Advisory">
+            <!-- mets ici le BON nom de fichier -->
+            <img src="logo-phoenix-achille-comoe.png" alt="LE PHŒNIX — ACHILLE COMOE Legal Advisory" class="logo-img">
           </div>
           <div class="logo-text">
             <div class="logo-title">LE PHŒNIX — ACHILLE COMOE</div>
@@ -1503,7 +1497,7 @@
               </h3>
               <p>
                 <span class="lang lang-fr">
-                  Titre : <strong>« La responsabilité pour mouvement transfrontière illicite de déchets dangereux : Cas des États du Golfe de Guinée »</strong>.
+                  Titre : <strong>« La responsabilité pour mouvement transfrontrière illicite de déchets dangereux : Cas des États du Golfe de Guinée »</strong>.
                   Cette recherche analyse, en droit privé, les régimes de responsabilité civile et pénale applicables aux flux illicites
                   de déchets dangereux, en examinant les difficultés d’imputation, de prévention et de réparation dans les ordres juridiques
                   nationaux.
